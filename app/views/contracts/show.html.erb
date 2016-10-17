@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @contract.type %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @contract.date %>
+</p>
+
+<p>
+  <strong>Period:</strong>
+  <%= @contract.period %>
+</p>
+
+<p>
+  <strong>Interval:</strong>
+  <%= @contract.interval %>
+</p>
+
+<p>
+  <strong>Fee:</strong>
+  <%= @contract.fee %>
+</p>
+
+<%= link_to 'Edit', edit_contract_path(@contract) %> |
+<%= link_to 'Back', contracts_path %>
