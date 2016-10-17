@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161017140431) do
+ActiveRecord::Schema.define(version: 20161017150619) do
 
   create_table "customers", force: :cascade do |t|
     t.string   "email"
@@ -21,5 +21,12 @@ ActiveRecord::Schema.define(version: 20161017140431) do
   end
 
   add_index "customers", ["email"], name: "index_customers_on_email", unique: true
+
+  create_table "items", force: :cascade do |t|
+    t.string   "item_name"
+    t.string   "item_price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
