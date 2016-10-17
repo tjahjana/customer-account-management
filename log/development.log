@@ -1108,3 +1108,303 @@ Processing by ItemsController#index as HTML
   [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
   Rendered items/index.html.erb within layouts/application.html.erb (2.3ms)
 Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-17 21:26:52 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (10.1ms)
+Completed 200 OK in 835ms (Views: 801.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/items" for ::1 at 2016-10-17 21:26:56 +0200
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application.html.erb (9.0ms)
+Completed 200 OK in 45ms (Views: 40.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-17 21:26:58 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (3.1ms)
+Completed 200 OK in 53ms (Views: 51.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for ::1 at 2016-10-17 21:27:00 +0200
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application.html.erb (2.9ms)
+Completed 200 OK in 76ms (Views: 74.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-17 21:27:01 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.5ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (4.4ms)
+Completed 200 OK in 73ms (Views: 71.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/items" for ::1 at 2016-10-17 21:27:03 +0200
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application.html.erb (7.7ms)
+Completed 200 OK in 69ms (Views: 66.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-17 21:27:10 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (2.0ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for ::1 at 2016-10-17 21:27:11 +0200
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application.html.erb (5.7ms)
+Completed 200 OK in 48ms (Views: 47.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-17 21:27:12 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (2.7ms)
+Completed 200 OK in 59ms (Views: 57.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for ::1 at 2016-10-17 21:27:13 +0200
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application.html.erb (2.8ms)
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-17 21:27:18 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (3.7ms)
+Completed 200 OK in 51ms (Views: 49.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for ::1 at 2016-10-17 21:27:19 +0200
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application.html.erb (3.5ms)
+Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-17 21:27:21 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (1.9ms)
+Completed 200 OK in 51ms (Views: 49.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for ::1 at 2016-10-17 21:27:22 +0200
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application.html.erb (2.3ms)
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-17 21:27:26 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (2.6ms)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for ::1 at 2016-10-17 21:27:30 +0200
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application.html.erb (2.3ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-17 21:27:32 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (2.5ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for ::1 at 2016-10-17 21:27:33 +0200
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application.html.erb (2.7ms)
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-17 21:27:34 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (2.3ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for ::1 at 2016-10-17 21:27:36 +0200
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application.html.erb (3.2ms)
+Completed 200 OK in 58ms (Views: 57.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for ::1 at 2016-10-17 21:27:58 +0200
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application.html.erb (1.3ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-17 21:27:58 +0200
+
+
+Started GET "/assets/scaffolds.self-84705feb7bb9860e35604317e69f7b8db1e133a5cc74c14321e2c2fc95567b94.css?body=1" for ::1 at 2016-10-17 21:27:58 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-10-17 21:27:58 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-17 21:27:58 +0200
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-17 21:27:58 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-17 21:27:58 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-17 21:27:58 +0200
+
+
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-17 21:27:58 +0200
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-17 21:27:58 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-17 21:27:58 +0200
+
+
+Started GET "/customers" for ::1 at 2016-10-17 21:28:05 +0200
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (1.6ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for ::1 at 2016-10-17 21:28:06 +0200
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application.html.erb (1.9ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-17 21:28:07 +0200
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (2.0ms)
+Completed 200 OK in 42ms (Views: 40.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for ::1 at 2016-10-17 21:28:07 +0200
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application.html.erb (1.8ms)
+Completed 200 OK in 64ms (Views: 63.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-17 21:28:08 +0200
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (1.8ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for ::1 at 2016-10-17 21:28:09 +0200
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application.html.erb (2.1ms)
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-17 21:28:10 +0200
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.4ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (2.1ms)
+Completed 200 OK in 44ms (Views: 43.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/items" for ::1 at 2016-10-17 21:28:12 +0200
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application.html.erb (2.8ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-17 21:28:13 +0200
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (2.8ms)
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for ::1 at 2016-10-17 21:28:15 +0200
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application.html.erb (3.2ms)
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-17 21:28:20 +0200
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.6ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (3.3ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/customers/1" for ::1 at 2016-10-17 21:28:21 +0200
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered customers/show.html.erb within layouts/application.html.erb (1.5ms)
+Completed 200 OK in 106ms (Views: 49.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/1/edit" for ::1 at 2016-10-17 21:28:24 +0200
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered customers/_form.html.erb (150.3ms)
+  Rendered customers/edit.html.erb within layouts/application.html.erb (179.9ms)
+Completed 200 OK in 225ms (Views: 223.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-17 21:28:27 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (1.6ms)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-17 21:28:29 +0200
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (2.2ms)
+Completed 200 OK in 51ms (Views: 38.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for ::1 at 2016-10-17 21:28:30 +0200
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application.html.erb (2.0ms)
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-17 21:28:41 +0200
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (2.1ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.2ms)

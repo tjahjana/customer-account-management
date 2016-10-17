@@ -14,8 +14,29 @@
 	</header>
 
 	<main>
-		<%= yield %>
+
+		<div class="nav">
+			<ul class="nav-list">
+				<li>
+					<%= link_to "customer", :controller => 'customers', :action => 'index' %>
+				</li>
+				<li>
+					<%= link_to "item", :controller => 'items', :action => 'index' %>
+				</li>
+			</ul>
+			<hr>
+		</div>
+
+		<div id="content">
+			<%= yield %>
+		</div>
+		
 	</main>
+
+	<footer>
+		<hr>
+		<p>&copy; 2016</p>
+	</footer>
 
 </body>
 </html>
