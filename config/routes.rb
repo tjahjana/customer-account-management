@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'customers#index'
   resources :features
   resources :products
   resources :contracts
