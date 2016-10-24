@@ -1943,3 +1943,24 @@ Migrating to AddProductReferenceToFeature (20161024220810)
             FROM sqlite_temp_master
             WHERE name='index_products_on_contract_id' AND type='index'
 
+
+
+Started GET "/" for ::1 at 2016-10-25 00:17:06 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (4.6ms)
+Completed 200 OK in 86ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-25 00:17:11 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (11.6ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (22.4ms)
+Completed 200 OK in 1501ms (Views: 1419.5ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/items" for ::1 at 2016-10-25 00:17:15 +0200
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (5.5ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application.html.erb (11.7ms)
+Completed 200 OK in 54ms (Views: 44.6ms | ActiveRecord: 5.8ms)
