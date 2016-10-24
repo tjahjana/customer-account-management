@@ -2163,3 +2163,142 @@ ActionView::Template::Error (undefined method `type' for #<Contract:0x007fa16902
   Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
   Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
   Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (157.3ms)
+
+
+Started GET "/contracts" for ::1 at 2016-10-25 00:32:52 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ContractsController#index as HTML
+  [1m[35mContract Load (0.2ms)[0m  SELECT "contracts".* FROM "contracts"
+  Rendered contracts/index.html.erb within layouts/application.html.erb (38.5ms)
+Completed 200 OK in 334ms (Views: 308.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-25 00:32:52 +0200
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-25 00:32:52 +0200
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-25 00:32:52 +0200
+
+
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-25 00:32:52 +0200
+
+
+Started GET "/assets/scaffolds.self-84705feb7bb9860e35604317e69f7b8db1e133a5cc74c14321e2c2fc95567b94.css?body=1" for ::1 at 2016-10-25 00:32:52 +0200
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-25 00:32:52 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-10-25 00:32:52 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-25 00:32:52 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-25 00:32:52 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-25 00:32:52 +0200
+
+
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-25 00:32:52 +0200
+
+
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-25 00:32:52 +0200
+
+
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-25 00:32:52 +0200
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-25 00:32:52 +0200
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-25 00:32:52 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-25 00:32:52 +0200
+
+
+Started GET "/contracts/4" for ::1 at 2016-10-25 00:32:56 +0200
+Processing by ContractsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mContract Load (0.2ms)[0m  [1mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered contracts/show.html.erb within layouts/application.html.erb (9.2ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `type' for #<Contract:0x007ffdccd6a520>):
+    2: 
+    3: <p>
+    4:   <strong>Type:</strong>
+    5:   <%= @contract.type %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/contracts/show.html.erb:5:in `_app_views_contracts_show_html_erb___872145901196754523_70364020163720'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.0ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (96.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (76.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (168.7ms)
+
+
+Started GET "/contracts/5/edit" for ::1 at 2016-10-25 00:33:06 +0200
+Processing by ContractsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mContract Load (0.2ms)[0m  SELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered contracts/_form.html.erb (106.0ms)
+  Rendered contracts/edit.html.erb within layouts/application.html.erb (111.1ms)
+Completed 200 OK in 166ms (Views: 164.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/contracts/5" for ::1 at 2016-10-25 00:33:09 +0200
+Processing by ContractsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wuOckMW+NY8AcntUmI+6WF8k35FmzLUFNi886q07KxQDGdINWILokstN3k/zYduNuri1QP7NWEPXrYkFYXvSgA==", "contract"=>{"name"=>"Contract 2", "date(1i)"=>"2016", "date(2i)"=>"10", "date(3i)"=>"24", "period"=>"365", "interval"=>"7", "fee"=>"105"}, "commit"=>"Update Contract", "id"=>"5"}
+  [1m[36mContract Load (0.2ms)[0m  [1mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/contracts/5
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/contracts/5" for ::1 at 2016-10-25 00:33:09 +0200
+Processing by ContractsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mContract Load (0.1ms)[0m  SELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered contracts/show.html.erb within layouts/application.html.erb (3.4ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `type' for #<Contract:0x007ffdce945da8>):
+    2: 
+    3: <p>
+    4:   <strong>Type:</strong>
+    5:   <%= @contract.type %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/contracts/show.html.erb:5:in `_app_views_contracts_show_html_erb___872145901196754523_70364020163720'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (65.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (136.5ms)
