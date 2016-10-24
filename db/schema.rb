@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161024191856) do
+ActiveRecord::Schema.define(version: 20161024201221) do
 
   create_table "contracts", force: :cascade do |t|
     t.text     "type"
@@ -28,6 +28,9 @@ ActiveRecord::Schema.define(version: 20161024191856) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "name"
+    t.string   "address"
+    t.integer  "tax"
   end
 
   add_index "customers", ["email"], name: "index_customers_on_email", unique: true

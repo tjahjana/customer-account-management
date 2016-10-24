@@ -1672,3 +1672,63 @@ Processing by ProductsController#index as HTML
   [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products"[0m
   Rendered products/index.html.erb within layouts/application.html.erb (3.5ms)
 Completed 200 OK in 45ms (Views: 40.8ms | ActiveRecord: 0.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddNameAddressTaxToCustomer (20161024201221)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "customers" ADD "name" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "customers" ADD "address" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "customers" ADD "tax" integer[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20161024201221"]]
+  [1m[36m (26.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_customers_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_customers_on_email' AND type='index'
+[0m
+
+
+Started GET "/" for ::1 at 2016-10-24 22:26:07 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 71ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-24 22:26:11 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (15.4ms)
+Completed 200 OK in 877ms (Views: 789.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/customers/1" for ::1 at 2016-10-24 22:26:15 +0200
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered customers/show.html.erb within layouts/application.html.erb (1.7ms)
+Completed 200 OK in 98ms (Views: 58.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-24 22:26:18 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (3.1ms)
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/new" for ::1 at 2016-10-24 22:26:21 +0200
+Processing by CustomersController#new as HTML
+  Rendered customers/_form.html.erb (125.9ms)
+  Rendered customers/new.html.erb within layouts/application.html.erb (155.8ms)
+Completed 200 OK in 213ms (Views: 210.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-24 22:26:23 +0200
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.5ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (3.0ms)
+Completed 200 OK in 70ms (Views: 68.9ms | ActiveRecord: 0.5ms)
