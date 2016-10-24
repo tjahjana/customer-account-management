@@ -11,17 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161024213409) do
+ActiveRecord::Schema.define(version: 20161024220810) do
 
   create_table "contracts", force: :cascade do |t|
     t.date     "date"
     t.integer  "period"
     t.integer  "interval"
     t.integer  "fee"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "name"
+    t.integer  "customer_id"
   end
+
+  add_index "contracts", ["customer_id"], name: "index_contracts_on_customer_id"
 
   create_table "customers", force: :cascade do |t|
     t.string   "email"
@@ -40,7 +43,10 @@ ActiveRecord::Schema.define(version: 20161024213409) do
     t.integer  "fee"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "product_id"
   end
+
+  add_index "features", ["product_id"], name: "index_features_on_product_id"
 
   create_table "items", force: :cascade do |t|
     t.string   "item_name"
@@ -52,8 +58,11 @@ ActiveRecord::Schema.define(version: 20161024213409) do
   create_table "products", force: :cascade do |t|
     t.text     "name"
     t.integer  "fee"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "contract_id"
   end
+
+  add_index "products", ["contract_id"], name: "index_products_on_contract_id"
 
 end
