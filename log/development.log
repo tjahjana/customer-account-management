@@ -1752,3 +1752,141 @@ Completed 200 OK in 70ms (Views: 68.9ms | ActiveRecord: 0.5ms)
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "customers" ("email", "password_digest", "name", "address", "tax", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "cust3@mail.com"], ["password_digest", "$2a$10$ff3xfpbBkRd5xsfxZ/8Syuaf/8hC.o7o/xK282q/CsZU31ATIHway"], ["name", "Dee Jane"], ["address", "Fore Street 9"], ["tax", 17448392], ["created_at", "2016-10-24 21:27:21.013564"], ["updated_at", "2016-10-24 21:27:21.013564"]]
   [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeTypeToNameInContract (20161024213409)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TEMPORARY TABLE "acontracts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" text, "date" date, "period" integer, "interval" integer, "fee" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "contracts"
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "contracts"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "contracts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "period" integer, "interval" integer, "fee" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "acontracts"[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "acontracts"
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "contracts" ADD "name" varchar[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20161024213409"]]
+  [1m[36m (20.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_customers_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_customers_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "customers" ("email", "password_digest", "name", "address", "tax", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "cust1@mail.com"], ["password_digest", "$2a$10$4cGZTrXVVhMXQLFsa8F0qeR2z18YyJi7KImfVK6AKxLIME78QW4xO"], ["name", "Bee Jay"], ["address", "Been Street 30"], ["tax", 35820347], ["created_at", "2016-10-24 21:36:26.913917"], ["updated_at", "2016-10-24 21:36:26.913917"]]
+SQLite3::ConstraintException: UNIQUE constraint failed: customers.email: INSERT INTO "customers" ("email", "password_digest", "name", "address", "tax", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "contracts" ("name", "period", "interval", "fee", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Contract 1"], ["period", 31], ["interval", 7], ["fee", 100], ["date", "2016-10-24"], ["created_at", "2016-10-24 21:40:11.899453"], ["updated_at", "2016-10-24 21:40:11.899453"]]
+  [1m[35m (22.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "contracts" ("name", "period", "interval", "fee", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Contract 2"], ["period", 365], ["interval", 7], ["fee", 105], ["date", "2016-10-24"], ["created_at", "2016-10-24 21:40:11.928864"], ["updated_at", "2016-10-24 21:40:11.928864"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "contracts" ("name", "period", "interval", "fee", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Contract 3"], ["period", 31], ["interval", 14], ["fee", 120], ["date", "2016-10-24"], ["created_at", "2016-10-24 21:40:11.933635"], ["updated_at", "2016-10-24 21:40:11.933635"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("name", "fee", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Product 1"], ["fee", 30], ["created_at", "2016-10-24 21:40:11.975441"], ["updated_at", "2016-10-24 21:40:11.975441"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "fee", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Product 2"], ["fee", 10], ["created_at", "2016-10-24 21:40:11.979227"], ["updated_at", "2016-10-24 21:40:11.979227"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "fee", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Product 3"], ["fee", 17], ["created_at", "2016-10-24 21:40:11.981888"], ["updated_at", "2016-10-24 21:40:11.981888"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "features" ("name", "fee", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Feature 1"], ["fee", 5], ["created_at", "2016-10-24 21:40:12.006210"], ["updated_at", "2016-10-24 21:40:12.006210"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "features" ("name", "fee", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Feature 2"], ["fee", 2], ["created_at", "2016-10-24 21:40:12.010327"], ["updated_at", "2016-10-24 21:40:12.010327"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "features" ("name", "fee", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Feature 3"], ["fee", 2], ["created_at", "2016-10-24 21:40:12.013477"], ["updated_at", "2016-10-24 21:40:12.013477"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (3.3ms)[0m  DELETE FROM "customers"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "customers" ("email", "password_digest", "name", "address", "tax", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["email", "cust1@mail.com"], ["password_digest", "$2a$10$ZkaGf9467oINWZhfURhkT.pM1X69Vv9s/ndxvn1Dil3cbUhEZTz6K"], ["name", "Bee Jay"], ["address", "Been Street 30"], ["tax", 35820347], ["created_at", "2016-10-24 21:42:11.559096"], ["updated_at", "2016-10-24 21:42:11.559096"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "customers" ("email", "password_digest", "name", "address", "tax", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "cust2@mail.com"], ["password_digest", "$2a$10$yzuCZb8cyW3IpglZtAhfyugB83S0GcMP9cjie5AH0GSNZgmE6ANNO"], ["name", "Cee Joy"], ["address", "Bonn Street 25"], ["tax", 49377028], ["created_at", "2016-10-24 21:42:11.662640"], ["updated_at", "2016-10-24 21:42:11.662640"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "customers" ("email", "password_digest", "name", "address", "tax", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["email", "cust3@mail.com"], ["password_digest", "$2a$10$KRRwyBGUoNwB24NlPrBI7uIZzAjkD9g5BNH.d9PFYpz1vWAJ1umzC"], ["name", "Dee Jane"], ["address", "Fore Street 9"], ["tax", 17448392], ["created_at", "2016-10-24 21:42:11.759455"], ["updated_at", "2016-10-24 21:42:11.759455"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "contracts"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "contracts" ("name", "period", "interval", "fee", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Contract 1"], ["period", 31], ["interval", 7], ["fee", 100], ["date", "2016-10-24"], ["created_at", "2016-10-24 21:42:11.776264"], ["updated_at", "2016-10-24 21:42:11.776264"]]
+  [1m[36m (3.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "contracts" ("name", "period", "interval", "fee", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Contract 2"], ["period", 365], ["interval", 7], ["fee", 105], ["date", "2016-10-24"], ["created_at", "2016-10-24 21:42:11.782770"], ["updated_at", "2016-10-24 21:42:11.782770"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "contracts" ("name", "period", "interval", "fee", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Contract 3"], ["period", 31], ["interval", 14], ["fee", 120], ["date", "2016-10-24"], ["created_at", "2016-10-24 21:42:11.787010"], ["updated_at", "2016-10-24 21:42:11.787010"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (1.7ms)[0m  DELETE FROM "products"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("name", "fee", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Product 1"], ["fee", 30], ["created_at", "2016-10-24 21:42:11.801275"], ["updated_at", "2016-10-24 21:42:11.801275"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "fee", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Product 2"], ["fee", 10], ["created_at", "2016-10-24 21:42:11.805087"], ["updated_at", "2016-10-24 21:42:11.805087"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "fee", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Product 3"], ["fee", 17], ["created_at", "2016-10-24 21:42:11.807703"], ["updated_at", "2016-10-24 21:42:11.807703"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (1.4ms)[0m  DELETE FROM "features"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "features" ("name", "fee", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Feature 1"], ["fee", 5], ["created_at", "2016-10-24 21:42:11.818521"], ["updated_at", "2016-10-24 21:42:11.818521"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "features" ("name", "fee", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Feature 2"], ["fee", 2], ["created_at", "2016-10-24 21:42:11.822354"], ["updated_at", "2016-10-24 21:42:11.822354"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "features" ("name", "fee", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Feature 3"], ["fee", 2], ["created_at", "2016-10-24 21:42:11.825180"], ["updated_at", "2016-10-24 21:42:11.825180"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for ::1 at 2016-10-24 23:42:32 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 150ms (Views: 83.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-24 23:42:37 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (11.8ms)
+Completed 200 OK in 804ms (Views: 753.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/items" for ::1 at 2016-10-24 23:42:43 +0200
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (1.4ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application.html.erb (11.9ms)
+Completed 200 OK in 152ms (Views: 144.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-24 23:42:46 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (4.5ms)
+Completed 200 OK in 55ms (Views: 53.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/5" for ::1 at 2016-10-24 23:42:47 +0200
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCustomer Load (0.4ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered customers/show.html.erb within layouts/application.html.erb (1.0ms)
+Completed 200 OK in 115ms (Views: 53.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers" for ::1 at 2016-10-24 23:42:49 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (4.0ms)
+Completed 200 OK in 57ms (Views: 55.2ms | ActiveRecord: 0.3ms)
