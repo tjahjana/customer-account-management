@@ -1732,3 +1732,23 @@ Processing by CustomersController#index as HTML
   [1m[36mCustomer Load (0.5ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
   Rendered customers/index.html.erb within layouts/application.html.erb (3.0ms)
 Completed 200 OK in 70ms (Views: 68.9ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_customers_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_customers_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (26.1ms)[0m  [1mINSERT INTO "customers" ("email", "password_digest", "name", "address", "tax", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "cust1@mail.com"], ["password_digest", "$2a$10$QHwAomBNnJgvMtzGAi4mjOwx55roiXIEWJr/Pcplsf16bvf.QEtXi"], ["name", "Bee Jay"], ["address", "Been Street 30"], ["tax", 35820347], ["created_at", "2016-10-24 21:27:20.737665"], ["updated_at", "2016-10-24 21:27:20.737665"]]
+  [1m[35m (23.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "customers" ("email", "password_digest", "name", "address", "tax", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["email", "cust2@mail.com"], ["password_digest", "$2a$10$oEEpAFJYdxvuJqbL74NWXO5Acx.ijD48WPi.n7roZdJIxlfh9lutu"], ["name", "Cee Joy"], ["address", "Bonn Street 25"], ["tax", 49377028], ["created_at", "2016-10-24 21:27:20.908426"], ["updated_at", "2016-10-24 21:27:20.908426"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "customers" ("email", "password_digest", "name", "address", "tax", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "cust3@mail.com"], ["password_digest", "$2a$10$ff3xfpbBkRd5xsfxZ/8Syuaf/8hC.o7o/xK282q/CsZU31ATIHway"], ["name", "Dee Jane"], ["address", "Fore Street 9"], ["tax", 17448392], ["created_at", "2016-10-24 21:27:21.013564"], ["updated_at", "2016-10-24 21:27:21.013564"]]
+  [1m[35m (1.6ms)[0m  commit transaction
