@@ -1964,3 +1964,202 @@ Processing by ItemsController#index as HTML
   [1m[36mItem Load (5.5ms)[0m  [1mSELECT "items".* FROM "items"[0m
   Rendered items/index.html.erb within layouts/application.html.erb (11.7ms)
 Completed 200 OK in 54ms (Views: 44.6ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/items" for ::1 at 2016-10-25 00:29:43 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application.html.erb (10.0ms)
+Completed 200 OK in 304ms (Views: 286.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-25 00:29:44 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-10-25 00:29:44 +0200
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-25 00:29:44 +0200
+
+
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-25 00:29:44 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-25 00:29:44 +0200
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-25 00:29:44 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-25 00:29:44 +0200
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-25 00:29:44 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-25 00:29:44 +0200
+
+
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-25 00:29:44 +0200
+
+
+Started GET "/assets/scaffolds.self-84705feb7bb9860e35604317e69f7b8db1e133a5cc74c14321e2c2fc95567b94.css?body=1" for ::1 at 2016-10-25 00:29:44 +0200
+
+
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-25 00:29:44 +0200
+
+
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-25 00:29:44 +0200
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-25 00:29:44 +0200
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-25 00:29:44 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-25 00:29:44 +0200
+
+
+Started GET "/customers" for ::1 at 2016-10-25 00:29:46 +0200
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (11.5ms)
+Completed 200 OK in 85ms (Views: 71.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers/5" for ::1 at 2016-10-25 00:29:48 +0200
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered customers/show.html.erb within layouts/application.html.erb (1.6ms)
+Completed 200 OK in 136ms (Views: 55.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/contracts" for ::1 at 2016-10-25 00:29:54 +0200
+Processing by ContractsController#index as HTML
+  [1m[36mContract Load (28.5ms)[0m  [1mSELECT "contracts".* FROM "contracts"[0m
+  Rendered contracts/index.html.erb within layouts/application.html.erb (92.7ms)
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 29.2ms)
+
+ActionView::Template::Error (undefined method `type' for #<Contract:0x007fa1682af2e0>):
+    17:   <tbody>
+    18:     <% @contracts.each do |contract| %>
+    19:       <tr>
+    20:         <td><%= contract.type %></td>
+    21:         <td><%= contract.date %></td>
+    22:         <td><%= contract.period %></td>
+    23:         <td><%= contract.interval %></td>
+  app/views/contracts/index.html.erb:20:in `block in _app_views_contracts_index_html_erb___878111544602098746_70165577557740'
+  app/views/contracts/index.html.erb:18:in `_app_views_contracts_index_html_erb___878111544602098746_70165577557740'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (110.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (207.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (337.3ms)
+
+
+Started GET "/contracts" for ::1 at 2016-10-25 00:30:07 +0200
+Processing by ContractsController#index as HTML
+  [1m[35mContract Load (1.3ms)[0m  SELECT "contracts".* FROM "contracts"
+  Rendered contracts/index.html.erb within layouts/application.html.erb (9.5ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (undefined method `type' for #<Contract:0x007fa167acea58>):
+    17:   <tbody>
+    18:     <% @contracts.each do |contract| %>
+    19:       <tr>
+    20:         <td><%= contract.type %></td>
+    21:         <td><%= contract.date %></td>
+    22:         <td><%= contract.period %></td>
+    23:         <td><%= contract.interval %></td>
+  app/views/contracts/index.html.erb:20:in `block in _app_views_contracts_index_html_erb___878111544602098746_70165577557740'
+  app/views/contracts/index.html.erb:18:in `_app_views_contracts_index_html_erb___878111544602098746_70165577557740'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (81.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (64.0ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (139.7ms)
+
+
+Started GET "/contracts" for ::1 at 2016-10-25 00:30:13 +0200
+Processing by ContractsController#index as HTML
+  [1m[36mContract Load (0.2ms)[0m  [1mSELECT "contracts".* FROM "contracts"[0m
+  Rendered contracts/index.html.erb within layouts/application.html.erb (5.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `type' for #<Contract:0x007fa1622be0c0>):
+    17:   <tbody>
+    18:     <% @contracts.each do |contract| %>
+    19:       <tr>
+    20:         <td><%= contract.type %></td>
+    21:         <td><%= contract.date %></td>
+    22:         <td><%= contract.period %></td>
+    23:         <td><%= contract.interval %></td>
+  app/views/contracts/index.html.erb:20:in `block in _app_views_contracts_index_html_erb___878111544602098746_70165577557740'
+  app/views/contracts/index.html.erb:18:in `_app_views_contracts_index_html_erb___878111544602098746_70165577557740'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (99.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (67.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (148.3ms)
+
+
+Started GET "/contracts" for ::1 at 2016-10-25 00:30:26 +0200
+Processing by ContractsController#index as HTML
+  [1m[35mContract Load (0.3ms)[0m  SELECT "contracts".* FROM "contracts"
+  Rendered contracts/index.html.erb within layouts/application.html.erb (6.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `type' for #<Contract:0x007fa16902a848>):
+    17:   <tbody>
+    18:     <% @contracts.each do |contract| %>
+    19:       <tr>
+    20:         <td><%= contract.type %></td>
+    21:         <td><%= contract.date %></td>
+    22:         <td><%= contract.period %></td>
+    23:         <td><%= contract.interval %></td>
+  app/views/contracts/index.html.erb:20:in `block in _app_views_contracts_index_html_erb___878111544602098746_70165577557740'
+  app/views/contracts/index.html.erb:18:in `_app_views_contracts_index_html_erb___878111544602098746_70165577557740'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (73.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (67.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (157.3ms)
