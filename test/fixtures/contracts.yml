@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: MyText
+  date: 2016-10-24
+  period: 1
+  interval: 1
+  fee: 1
+
+two:
+  type: MyText
+  date: 2016-10-24
+  period: 1
+  interval: 1
+  fee: 1

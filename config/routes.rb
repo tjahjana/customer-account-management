@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :features
+  resources :products
+  resources :contracts
   #get 'items/new'
 
   #get 'items/index'
