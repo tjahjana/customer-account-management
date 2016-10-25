@@ -10,6 +10,7 @@ class ContractsController < ApplicationController
   # GET /contracts/1
   # GET /contracts/1.json
   def show
+    @products = @contracts.products.all
   end
 
   # GET /contracts/new

@@ -17,9 +17,9 @@ Contract.create(name: "Contract 2", period: 365, interval: 7, fee: 105, date: Da
 Contract.create(name: "Contract 3", period: 31, interval: 14, fee: 120, date: Date.today, customer_id: 2)
 
 Product.delete_all
-Product.create(name: "Product 1", fee: 30)
-Product.create(name: "Product 2", fee: 10)
-Product.create(name: "Product 3", fee: 17)
+Product.create(name: "Product 1", fee: 30, contract_id: 1)
+Product.create(name: "Product 2", fee: 10, contract_id: 2)
+Product.create(name: "Product 3", fee: 17, contract_id: 3)
 
 Feature.delete_all
 Feature.create(name: "Feature 1", fee: 5)
