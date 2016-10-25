@@ -2977,3 +2977,501 @@ Processing by CustomersController#show as HTML
   [1m[35mCustomer Load (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 5]]
   Rendered customers/show.html.erb within layouts/application.html.erb (1.0ms)
 Completed 200 OK in 126ms (Views: 106.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2016-10-25 20:58:49 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (uninitialized constant ItemsController):
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:72:in `controller_reference'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:62:in `controller'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:41:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (12.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (733.7ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (491.4ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1201.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-25 21:01:24 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (1.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (8.0ms)
+Completed 200 OK in 261ms (Views: 244.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/customers/5" for 127.0.0.1 at 2016-10-25 21:01:28 +0200
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered customers/show.html.erb within layouts/application.html.erb (22.0ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Missing partial ../contracts/_index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/Anja/RubymineProjects/customer-account-management/app/views"
+):
+    16:   <strong>Tax:</strong>
+    17:   <%= @customer.tax %>
+    18: </p>
+    19: <%= render '../contracts/index' %>
+    20: 
+    21: <%= link_to 'Edit', edit_customer_path(@customer) %> |
+    22: <%= link_to 'Back', customers_path %>
+  app/views/customers/show.html.erb:19:in `_app_views_customers_show_html_erb__218638770_77266236'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (504.4ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (499.7ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1142.4ms)
+
+
+Started POST "/__web_console/repl_sessions/292119cad04cbffb4d19ce8be1bb02d1/trace" for 127.0.0.1 at 2016-10-25 21:01:39 +0200
+
+
+Started POST "/__web_console/repl_sessions/292119cad04cbffb4d19ce8be1bb02d1/trace" for 127.0.0.1 at 2016-10-25 21:01:41 +0200
+
+
+Started GET "/customers/5" for 127.0.0.1 at 2016-10-25 21:06:45 +0200
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mCustomer Load (1.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered customers/show.html.erb within layouts/application.html.erb (23.1ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (Missing partial contracts/_index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/Anja/RubymineProjects/customer-account-management/app/views"
+):
+    17:   <%= @customer.tax %>
+    18: </p>
+    19: 
+    20: <%= render 'contracts/index' %>
+    21: 
+    22: <%= link_to 'Edit', edit_customer_path(@customer) %> |
+    23: <%= link_to 'Back', customers_path %>
+  app/views/customers/show.html.erb:20:in `_app_views_customers_show_html_erb__218638770_76978512'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (526.4ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (491.3ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1121.9ms)
+
+
+Started POST "/__web_console/repl_sessions/7044a0b2e6ddded80d255b4ee87da875/trace" for 127.0.0.1 at 2016-10-25 21:11:02 +0200
+
+
+Started GET "/customers/5" for 127.0.0.1 at 2016-10-25 21:21:27 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mContract Load (0.0ms)[0m  [1mSELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?[0m  [["customer_id", 5]]
+  Rendered customers/show.html.erb within layouts/application.html.erb (4.0ms)
+Completed 200 OK in 274ms (Views: 218.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-10-25 21:21:33 +0200
+Processing by ContractsController#index as HTML
+  [1m[35mContract Load (0.0ms)[0m  SELECT "contracts".* FROM "contracts"
+  Rendered contracts/index.html.erb within layouts/application.html.erb (5.0ms)
+Completed 200 OK in 59ms (Views: 58.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contracts/4" for 127.0.0.1 at 2016-10-25 21:21:36 +0200
+Processing by ContractsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mContract Load (0.0ms)[0m  [1mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered contracts/show.html.erb within layouts/application.html.erb (1.0ms)
+Completed 200 OK in 80ms (Views: 78.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-25 21:22:51 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (3.0ms)
+Completed 200 OK in 88ms (Views: 87.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/5" for 127.0.0.1 at 2016-10-25 21:22:53 +0200
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCustomer Load (1.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mContract Load (0.0ms)[0m  SELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?  [["customer_id", 5]]
+  Rendered customers/show.html.erb within layouts/application.html.erb (1.0ms)
+Completed 200 OK in 83ms (Views: 82.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-10-25 21:22:59 +0200
+Processing by ContractsController#index as HTML
+  [1m[36mContract Load (0.0ms)[0m  [1mSELECT "contracts".* FROM "contracts"[0m
+  Rendered contracts/index.html.erb within layouts/application.html.erb (2.0ms)
+Completed 200 OK in 71ms (Views: 70.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-25 21:23:01 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (2.0ms)
+Completed 200 OK in 79ms (Views: 78.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-10-25 21:23:06 +0200
+Processing by ContractsController#index as HTML
+  [1m[36mContract Load (0.0ms)[0m  [1mSELECT "contracts".* FROM "contracts"[0m
+  Rendered contracts/index.html.erb within layouts/application.html.erb (1.0ms)
+Completed 200 OK in 81ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contracts/4/edit" for 127.0.0.1 at 2016-10-25 21:23:12 +0200
+Processing by ContractsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mContract Load (0.0ms)[0m  SELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered contracts/_form.html.erb (23.1ms)
+  Rendered contracts/edit.html.erb within layouts/application.html.erb (38.1ms)
+Completed 200 OK in 92ms (Views: 91.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-10-25 21:23:17 +0200
+Processing by ContractsController#index as HTML
+  [1m[36mContract Load (0.0ms)[0m  [1mSELECT "contracts".* FROM "contracts"[0m
+  Rendered contracts/index.html.erb within layouts/application.html.erb (2.0ms)
+Completed 200 OK in 67ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-10-25 21:23:53 +0200
+Processing by ContractsController#index as HTML
+  [1m[35mContract Load (0.0ms)[0m  SELECT "contracts".* FROM "contracts"
+  Rendered contracts/index.html.erb within layouts/application.html.erb (2.0ms)
+Completed 200 OK in 71ms (Views: 70.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-25 21:23:53 +0200
+
+
+Started GET "/assets/scaffolds.self-3d5b45c298e85e7ba76092d9615535a4c09f96e98770509eed805341fdb87240.css?body=1" for 127.0.0.1 at 2016-10-25 21:23:53 +0200
+
+
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-25 21:23:53 +0200
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-25 21:23:53 +0200
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-25 21:23:53 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-25 21:23:53 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-25 21:23:53 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-25 21:23:53 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-25 21:23:53 +0200
+
+
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-25 21:23:53 +0200
+
+
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-25 21:23:53 +0200
+
+
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-25 21:23:53 +0200
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-25 21:23:53 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-25 21:23:53 +0200
+
+
+Started GET "/contracts/4" for 127.0.0.1 at 2016-10-25 21:23:56 +0200
+Processing by ContractsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mContract Load (0.0ms)[0m  [1mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered contracts/show.html.erb within layouts/application.html.erb (0.0ms)
+Completed 200 OK in 60ms (Views: 58.7ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (34.1ms)[0m  DELETE FROM "customers"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "customers" ("email", "password_digest", "name", "address", "tax", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["email", "cust1@mail.com"], ["password_digest", "$2a$10$N3KEzMpcCf/VVH3XyHGve.Lmp13OnIOrjhRm4EYXy/WPEkl7Ueb9i"], ["name", "Bee Jay"], ["address", "Been Street 30"], ["tax", 35820347], ["created_at", "2016-10-25 19:27:28.912760"], ["updated_at", "2016-10-25 19:27:28.912760"]]
+  [1m[36m (23.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "customers" ("email", "password_digest", "name", "address", "tax", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "cust2@mail.com"], ["password_digest", "$2a$10$FgV7VXSOK7WodCqtZE2Xz.NPYC8o4y4i41VCBjRI0UQD17H6klssy"], ["name", "Cee Joy"], ["address", "Bonn Street 25"], ["tax", 49377028], ["created_at", "2016-10-25 19:27:29.004993"], ["updated_at", "2016-10-25 19:27:29.004993"]]
+  [1m[35m (24.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "customers" ("email", "password_digest", "name", "address", "tax", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["email", "cust3@mail.com"], ["password_digest", "$2a$10$P0KhO/XQ9dAFxTl4hO9gaOxyrCaot4O2K.dSCZkIBRZrXw1m6rmSW"], ["name", "Dee Jane"], ["address", "Fore Street 9"], ["tax", 17448392], ["created_at", "2016-10-25 19:27:29.097227"], ["updated_at", "2016-10-25 19:27:29.097227"]]
+  [1m[36m (24.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (25.5ms)[0m  DELETE FROM "contracts"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "contracts" ("name", "period", "interval", "fee", "date", "customer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Contract 1"], ["period", 31], ["interval", 7], ["fee", 100], ["date", "2016-10-25"], ["customer_id", 1], ["created_at", "2016-10-25 19:27:29.160585"], ["updated_at", "2016-10-25 19:27:29.160585"]]
+  [1m[36m (24.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "contracts" ("name", "period", "interval", "fee", "date", "customer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Contract 2"], ["period", 365], ["interval", 7], ["fee", 105], ["date", "2016-10-25"], ["customer_id", 1], ["created_at", "2016-10-25 19:27:29.187953"], ["updated_at", "2016-10-25 19:27:29.187953"]]
+  [1m[35m (24.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "contracts" ("name", "period", "interval", "fee", "date", "customer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Contract 3"], ["period", 31], ["interval", 14], ["fee", 120], ["date", "2016-10-25"], ["customer_id", 2], ["created_at", "2016-10-25 19:27:29.214665"], ["updated_at", "2016-10-25 19:27:29.214665"]]
+  [1m[36m (25.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (25.1ms)[0m  DELETE FROM "products"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "fee", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Product 1"], ["fee", 30], ["created_at", "2016-10-25 19:27:29.278806"], ["updated_at", "2016-10-25 19:27:29.278806"]]
+  [1m[36m (24.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "products" ("name", "fee", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Product 2"], ["fee", 10], ["created_at", "2016-10-25 19:27:29.305150"], ["updated_at", "2016-10-25 19:27:29.305150"]]
+  [1m[35m (28.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "products" ("name", "fee", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Product 3"], ["fee", 17], ["created_at", "2016-10-25 19:27:29.336268"], ["updated_at", "2016-10-25 19:27:29.336268"]]
+  [1m[36m (26.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (29.3ms)[0m  DELETE FROM "features"
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "features" ("name", "fee", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Feature 1"], ["fee", 5], ["created_at", "2016-10-25 19:27:29.411129"], ["updated_at", "2016-10-25 19:27:29.411129"]]
+  [1m[36m (28.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "features" ("name", "fee", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Feature 2"], ["fee", 2], ["created_at", "2016-10-25 19:27:29.445291"], ["updated_at", "2016-10-25 19:27:29.445291"]]
+  [1m[35m (27.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "features" ("name", "fee", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Feature 3"], ["fee", 2], ["created_at", "2016-10-25 19:27:29.478629"], ["updated_at", "2016-10-25 19:27:29.478629"]]
+  [1m[36m (27.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/contracts/4" for 127.0.0.1 at 2016-10-25 21:27:52 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ContractsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mContract Load (0.0ms)[0m  SELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT 1  [["id", 4]]
+Completed 404 Not Found in 31ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Contract with 'id'=4):
+  app/controllers/contracts_controller.rb:67:in `set_contract'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (532.4ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (549.4ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1321.9ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-10-25 21:28:03 +0200
+Processing by ContractsController#index as HTML
+  [1m[36mContract Load (0.0ms)[0m  [1mSELECT "contracts".* FROM "contracts"[0m
+  Rendered contracts/index.html.erb within layouts/application.html.erb (8.1ms)
+Completed 200 OK in 303ms (Views: 301.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-25 21:28:03 +0200
+
+
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-25 21:28:03 +0200
+
+
+Started GET "/assets/scaffolds.self-3d5b45c298e85e7ba76092d9615535a4c09f96e98770509eed805341fdb87240.css?body=1" for 127.0.0.1 at 2016-10-25 21:28:03 +0200
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-25 21:28:03 +0200
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-25 21:28:03 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-25 21:28:03 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-25 21:28:03 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-25 21:28:03 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-25 21:28:03 +0200
+
+
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-25 21:28:03 +0200
+
+
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-25 21:28:03 +0200
+
+
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-25 21:28:03 +0200
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-25 21:28:03 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-25 21:28:03 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-25 21:28:08 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (6.0ms)
+Completed 200 OK in 66ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/8" for 127.0.0.1 at 2016-10-25 21:28:10 +0200
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mCustomer Load (1.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mContract Load (0.0ms)[0m  SELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?  [["customer_id", 8]]
+  Rendered customers/show.html.erb within layouts/application.html.erb (2.0ms)
+Completed 200 OK in 111ms (Views: 60.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-10-25 21:28:13 +0200
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (2.0ms)
+Completed 200 OK in 69ms (Views: 68.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/9" for 127.0.0.1 at 2016-10-25 21:28:14 +0200
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mCustomer Load (1.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mContract Load (0.0ms)[0m  [1mSELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?[0m  [["customer_id", 9]]
+  Rendered customers/show.html.erb within layouts/application.html.erb (1.0ms)
+Completed 200 OK in 77ms (Views: 75.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-10-25 21:28:16 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (1.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (1.0ms)
+Completed 200 OK in 68ms (Views: 66.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/customers/10" for 127.0.0.1 at 2016-10-25 21:28:17 +0200
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mContract Load (1.0ms)[0m  SELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?  [["customer_id", 10]]
+  Rendered customers/show.html.erb within layouts/application.html.erb (1.0ms)
+Completed 200 OK in 95ms (Views: 91.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-10-25 21:28:20 +0200
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (1.0ms)
+Completed 200 OK in 70ms (Views: 69.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/8" for 127.0.0.1 at 2016-10-25 21:37:19 +0200
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mContract Load (1.0ms)[0m  [1mSELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?[0m  [["customer_id", 8]]
+  Rendered customers/show.html.erb within layouts/application.html.erb (1.0ms)
+Completed 200 OK in 67ms (Views: 63.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-10-25 21:38:38 +0200
+Processing by ContractsController#index as HTML
+  [1m[35mContract Load (0.0ms)[0m  SELECT "contracts".* FROM "contracts"
+  Rendered contracts/index.html.erb within layouts/application.html.erb (2.0ms)
+Completed 200 OK in 68ms (Views: 67.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contracts/7" for 127.0.0.1 at 2016-10-25 21:38:40 +0200
+Processing by ContractsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mContract Load (0.0ms)[0m  [1mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered contracts/show.html.erb within layouts/application.html.erb (1.0ms)
+Completed 200 OK in 85ms (Views: 83.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-10-25 21:40:51 +0200
+Processing by ContractsController#index as HTML
+  [1m[35mContract Load (0.0ms)[0m  SELECT "contracts".* FROM "contracts"
+  Rendered contracts/index.html.erb within layouts/application.html.erb (4.0ms)
+Completed 200 OK in 71ms (Views: 70.7ms | ActiveRecord: 0.0ms)

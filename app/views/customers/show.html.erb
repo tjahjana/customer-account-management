@@ -17,5 +17,35 @@
   <%= @customer.tax %>
 </p>
 
+<h1>Listing Contracts</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Date</th>
+    <th>Period</th>
+    <th>Interval</th>
+    <th>Fee</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @contracts.each do |contract| %>
+      <tr>
+        <td><%= contract.name %></td>
+        <td><%= contract.date %></td>
+        <td><%= contract.period %></td>
+        <td><%= contract.interval %></td>
+        <td><%= contract.fee %></td>
+        <td><%= link_to 'Show', contract %></td>
+        <td><%= link_to 'Edit', edit_contract_path(contract) %></td>
+        <td><%= link_to 'Destroy', contract, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
 <%= link_to 'Back', customers_path %>

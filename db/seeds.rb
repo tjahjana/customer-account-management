@@ -12,9 +12,9 @@ Customer.create(email: "cust2@mail.com", password: "456", password_confirmation:
 Customer.create(email: "cust3@mail.com", password: "789", password_confirmation: "789", name:"Dee Jane", address:"Fore Street 9", tax: "17448392")
 
 Contract.delete_all
-Contract.create(name: "Contract 1", period: 31, interval: 7, fee: 100, date: Date.today)
-Contract.create(name: "Contract 2", period: 365, interval: 7, fee: 105, date: Date.today)
-Contract.create(name: "Contract 3", period: 31, interval: 14, fee: 120, date: Date.today)
+Contract.create(name: "Contract 1", period: 31, interval: 7, fee: 100, date: Date.today, customer_id: 1)
+Contract.create(name: "Contract 2", period: 365, interval: 7, fee: 105, date: Date.today, customer_id: 1)
+Contract.create(name: "Contract 3", period: 31, interval: 14, fee: 120, date: Date.today, customer_id: 2)
 
 Product.delete_all
 Product.create(name: "Product 1", fee: 30)

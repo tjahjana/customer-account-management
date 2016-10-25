@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Customer ID</th>
       <th>Date</th>
       <th>Period</th>
       <th>Interval</th>
@@ -18,6 +19,7 @@
     <% @contracts.each do |contract| %>
       <tr>
         <td><%= contract.name %></td>
+        <td><%= contract.customer_id %></td>
         <td><%= contract.date %></td>
         <td><%= contract.period %></td>
         <td><%= contract.interval %></td>
