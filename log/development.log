@@ -4661,3 +4661,235 @@ Processing by ContractsController#show as HTML
   [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."contract_id" = ?  [["contract_id", 10]]
   Rendered contracts/show.html.erb within layouts/application.html.erb (0.0ms)
 Completed 200 OK in 44ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-25 22:58:48 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (8.0ms)
+Completed 200 OK in 232ms (Views: 216.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-3d5b45c298e85e7ba76092d9615535a4c09f96e98770509eed805341fdb87240.css?body=1" for 127.0.0.1 at 2016-10-25 22:58:49 +0200
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-25 22:58:49 +0200
+
+
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-25 22:58:49 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-25 22:58:49 +0200
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-25 22:58:49 +0200
+
+
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-25 22:58:49 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-25 22:58:49 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-25 22:58:49 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-25 22:58:49 +0200
+
+
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-25 22:58:49 +0200
+
+
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-25 22:58:49 +0200
+
+
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-25 22:58:49 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-25 22:58:49 +0200
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-25 22:58:49 +0200
+
+
+Started GET "/customers/11" for 127.0.0.1 at 2016-10-25 22:58:53 +0200
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCustomer Load (4.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mContract Load (0.0ms)[0m  SELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?  [["customer_id", 11]]
+  Rendered customers/show.html.erb within layouts/application.html.erb (0.0ms)
+Completed 200 OK in 87ms (Views: 66.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2016-10-25 22:58:59 +0200
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application.html.erb (4.0ms)
+Completed 200 OK in 56ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/10" for 127.0.0.1 at 2016-10-25 22:59:00 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mProduct Load (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mContract Load (0.0ms)[0m  [1mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application.html.erb (0.0ms)
+Completed 200 OK in 76ms (Views: 69.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-25 22:59:08 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (4.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (4.0ms)
+Completed 200 OK in 60ms (Views: 62.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-10-25 22:59:09 +0200
+Processing by ContractsController#index as HTML
+  [1m[36mContract Load (0.0ms)[0m  [1mSELECT "contracts".* FROM "contracts"[0m
+  Rendered contracts/index.html.erb within layouts/application.html.erb (8.2ms)
+Completed 200 OK in 68ms (Views: 73.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-25 22:59:19 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (0.0ms)
+Completed 200 OK in 48ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/11" for 127.0.0.1 at 2016-10-25 22:59:21 +0200
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mContract Load (0.0ms)[0m  SELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?  [["customer_id", 11]]
+  Rendered customers/show.html.erb within layouts/application.html.erb (0.0ms)
+Completed 200 OK in 44ms (Views: 55.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-25 22:59:24 +0200
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (4.0ms)
+Completed 200 OK in 60ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/13" for 127.0.0.1 at 2016-10-25 22:59:25 +0200
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mContract Load (0.0ms)[0m  [1mSELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?[0m  [["customer_id", 13]]
+  Rendered customers/show.html.erb within layouts/application.html.erb (4.0ms)
+Completed 200 OK in 56ms (Views: 57.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-25 22:59:27 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (0.0ms)
+Completed 200 OK in 64ms (Views: 61.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/12" for 127.0.0.1 at 2016-10-25 22:59:28 +0200
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mContract Load (0.0ms)[0m  SELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?  [["customer_id", 12]]
+  Rendered customers/show.html.erb within layouts/application.html.erb (0.0ms)
+Completed 200 OK in 52ms (Views: 53.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/1" for 127.0.0.1 at 2016-10-25 22:59:36 +0200
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 0ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Customer with 'id'=1):
+  app/controllers/customers_controller.rb:68:in `set_customer'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (568.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (584.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1484.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-25 22:59:48 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (0.0ms)
+Completed 200 OK in 52ms (Views: 56.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-10-25 22:59:55 +0200
+Processing by ContractsController#index as HTML
+  [1m[36mContract Load (4.0ms)[0m  [1mSELECT "contracts".* FROM "contracts"[0m
+  Rendered contracts/index.html.erb within layouts/application.html.erb (4.0ms)
+Completed 200 OK in 48ms (Views: 55.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/contracts/10" for 127.0.0.1 at 2016-10-25 23:01:23 +0200
+Processing by ContractsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mContract Load (0.0ms)[0m  SELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."contract_id" = ?[0m  [["contract_id", 10]]
+  Rendered contracts/show.html.erb within layouts/application.html.erb (0.0ms)
+Completed 200 OK in 74ms (Views: 69.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contracts/11" for 127.0.0.1 at 2016-10-25 23:01:27 +0200
+Processing by ContractsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mContract Load (0.0ms)[0m  SELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."contract_id" = ?[0m  [["contract_id", 11]]
+  Rendered contracts/show.html.erb within layouts/application.html.erb (0.0ms)
+Completed 200 OK in 52ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contracts/12" for 127.0.0.1 at 2016-10-25 23:01:31 +0200
+Processing by ContractsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mContract Load (0.0ms)[0m  SELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."contract_id" = ?[0m  [["contract_id", 12]]
+  Rendered contracts/show.html.erb within layouts/application.html.erb (0.0ms)
+Completed 200 OK in 64ms (Views: 64.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2016-10-25 23:01:34 +0200
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application.html.erb (0.0ms)
+Completed 200 OK in 64ms (Views: 64.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-10-25 23:01:40 +0200
+Processing by ContractsController#index as HTML
+  [1m[36mContract Load (0.0ms)[0m  [1mSELECT "contracts".* FROM "contracts"[0m
+  Rendered contracts/index.html.erb within layouts/application.html.erb (0.0ms)
+Completed 200 OK in 44ms (Views: 55.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-25 23:01:47 +0200
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (0.0ms)
+Completed 200 OK in 64ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/11" for 127.0.0.1 at 2016-10-25 23:01:51 +0200
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mContract Load (0.0ms)[0m  SELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?  [["customer_id", 11]]
+  Rendered customers/show.html.erb within layouts/application.html.erb (4.0ms)
+Completed 200 OK in 52ms (Views: 54.7ms | ActiveRecord: 0.0ms)
