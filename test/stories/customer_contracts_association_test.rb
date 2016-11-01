@@ -5,6 +5,6 @@ class ListContractsTest < ActionDispatch::IntegrationTest
 
     test "get contracts list of customer" do
       #perform test
-      assert_equal 1, 1
+      assert_equal 1, 0
   end
 end
