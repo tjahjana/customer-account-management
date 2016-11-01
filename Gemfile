@@ -1,5 +1,13 @@
 source 'http://rubygems.org'
 
+#test Framework
+group :test do
+# see https://github.com/jnicklas/capybara#setup
+  gem 'capybara'
+end
+gem 'capybara'
+
+# Windows hack
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'

@@ -7,21 +7,21 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Customer.delete_all
-Customer.create(email: "cust1@mail.com", password: "123", password_confirmation: "123", name:"Bee Jay", address:"Been Street 30", tax: "35820347")
-Customer.create(email: "cust2@mail.com", password: "456", password_confirmation: "456", name:"Cee Joy", address:"Bonn Street 25", tax: "49377028")
-Customer.create(email: "cust3@mail.com", password: "789", password_confirmation: "789", name:"Dee Jane", address:"Fore Street 9", tax: "17448392")
+customer1 = Customer.create(email: "cust1@mail.com", password: "123", password_confirmation: "123", name:"Bee Jay", address:"Been Street 30", tax: "35820347")
+customer2 = Customer.create(email: "cust2@mail.com", password: "456", password_confirmation: "456", name:"Cee Joy", address:"Bonn Street 25", tax: "49377028")
+customer3 = Customer.create(email: "cust3@mail.com", password: "789", password_confirmation: "789", name:"Dee Jane", address:"Fore Street 9", tax: "17448392")
 
 Contract.delete_all
-Contract.create(name: "Contract 1", period: 31, interval: 7, fee: 100, date: Date.today, customer_id: 1)
-Contract.create(name: "Contract 2", period: 365, interval: 7, fee: 105, date: Date.today, customer_id: 1)
-Contract.create(name: "Contract 3", period: 31, interval: 14, fee: 120, date: Date.today, customer_id: 2)
+contract1 = customer1.contracts.create(name: "Contract 1", period: 31, interval: 7, fee: 100, date: Date.today)
+contract2 = customer2.contracts.create(name: "Contract 2", period: 365, interval: 7, fee: 105, date: Date.today)
+contract3 = customer3.contracts.create(name: "Contract 3", period: 31, interval: 14, fee: 120, date: Date.today)
 
 Product.delete_all
-Product.create(name: "Product 1", fee: 30, contract_id: 1)
-Product.create(name: "Product 2", fee: 10, contract_id: 2)
-Product.create(name: "Product 3", fee: 17, contract_id: 3)
+product1 = contract1.products.create(name: "Product 1", fee: 30)
+product2 = contract2.products.create(name: "Product 2", fee: 10)
+product3 = contract3.products.create(name: "Product 3", fee: 17)
 
 Feature.delete_all
-Feature.create(name: "Feature 1", fee: 5)
-Feature.create(name: "Feature 2", fee: 2)
-Feature.create(name: "Feature 3", fee: 2)
+product1.features.create(name: "Feature 1", fee: 5)
+product2.features.create(name: "Feature 2", fee: 2)
+product3.features.create(name: "Feature 3", fee: 2)

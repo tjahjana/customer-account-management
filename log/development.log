@@ -4893,3 +4893,311 @@ Processing by CustomersController#show as HTML
   [1m[35mContract Load (0.0ms)[0m  SELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?  [["customer_id", 11]]
   Rendered customers/show.html.erb within layouts/application.html.erb (4.0ms)
 Completed 200 OK in 52ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-31 22:38:35 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application.html.erb (10.0ms)
+Completed 200 OK in 400ms (Views: 375.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-31 22:38:36 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (2.0ms)
+Completed 200 OK in 57ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-31 22:38:36 +0100
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-31 22:38:36 +0100
+
+
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-31 22:38:36 +0100
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-31 22:38:36 +0100
+
+
+Started GET "/assets/scaffolds.self-3d5b45c298e85e7ba76092d9615535a4c09f96e98770509eed805341fdb87240.css?body=1" for 127.0.0.1 at 2016-10-31 22:38:36 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-31 22:38:36 +0100
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-31 22:38:36 +0100
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-31 22:38:36 +0100
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-31 22:38:36 +0100
+
+
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-31 22:38:36 +0100
+
+
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-31 22:38:36 +0100
+
+
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-31 22:38:36 +0100
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-31 22:38:36 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-31 22:38:36 +0100
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-10-31 22:38:45 +0100
+Processing by ContractsController#index as HTML
+  [1m[35mContract Load (0.5ms)[0m  SELECT "contracts".* FROM "contracts"
+  Rendered contracts/index.html.erb within layouts/application.html.erb (7.1ms)
+Completed 200 OK in 87ms (Views: 79.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2016-10-31 22:38:48 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application.html.erb (6.6ms)
+Completed 200 OK in 79ms (Views: 74.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/features" for 127.0.0.1 at 2016-10-31 22:38:49 +0100
+Processing by FeaturesController#index as HTML
+  [1m[35mFeature Load (0.0ms)[0m  SELECT "features".* FROM "features"
+  Rendered features/index.html.erb within layouts/application.html.erb (6.0ms)
+Completed 200 OK in 81ms (Views: 77.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2016-10-31 22:38:52 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application.html.erb (1.5ms)
+Completed 200 OK in 68ms (Views: 66.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-10-31 22:38:53 +0100
+Processing by ContractsController#index as HTML
+  [1m[35mContract Load (0.5ms)[0m  SELECT "contracts".* FROM "contracts"
+  Rendered contracts/index.html.erb within layouts/application.html.erb (1.5ms)
+Completed 200 OK in 62ms (Views: 60.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-31 22:38:54 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.5ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (1.5ms)
+Completed 200 OK in 64ms (Views: 62.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-10-31 22:38:56 +0100
+Processing by ContractsController#index as HTML
+  [1m[35mContract Load (0.5ms)[0m  SELECT "contracts".* FROM "contracts"
+  Rendered contracts/index.html.erb within layouts/application.html.erb (1.0ms)
+Completed 200 OK in 61ms (Views: 60.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-31 22:38:56 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.5ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (2.5ms)
+Completed 200 OK in 64ms (Views: 62.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers/11" for 127.0.0.1 at 2016-10-31 22:38:59 +0100
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mContract Load (0.0ms)[0m  [1mSELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?[0m  [["customer_id", 11]]
+  Rendered customers/show.html.erb within layouts/application.html.erb (7.0ms)
+Completed 200 OK in 95ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2016-10-31 22:39:03 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application.html.erb (1.5ms)
+Completed 200 OK in 60ms (Views: 59.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/10" for 127.0.0.1 at 2016-10-31 22:39:05 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mContract Load (0.5ms)[0m  SELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application.html.erb (0.5ms)
+Completed 200 OK in 61ms (Views: 56.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/features" for 127.0.0.1 at 2016-10-31 22:39:07 +0100
+Processing by FeaturesController#index as HTML
+  [1m[36mFeature Load (0.0ms)[0m  [1mSELECT "features".* FROM "features"[0m
+  Rendered features/index.html.erb within layouts/application.html.erb (1.4ms)
+Completed 200 OK in 66ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-10-31 22:39:09 +0100
+Processing by ContractsController#index as HTML
+  [1m[35mContract Load (0.0ms)[0m  SELECT "contracts".* FROM "contracts"
+  Rendered contracts/index.html.erb within layouts/application.html.erb (1.5ms)
+Completed 200 OK in 63ms (Views: 62.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contracts/10" for 127.0.0.1 at 2016-10-31 22:39:10 +0100
+Processing by ContractsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mContract Load (0.0ms)[0m  [1mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."contract_id" = ?  [["contract_id", 10]]
+  Rendered contracts/show.html.erb within layouts/application.html.erb (1.5ms)
+Completed 200 OK in 64ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-31 23:25:23 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (2.5ms)
+Completed 200 OK in 57ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_contracts_on_customer_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_contracts_on_customer_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_customers_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_customers_on_email' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_features_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_features_on_product_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_products_on_contract_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_products_on_contract_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_contracts_on_customer_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_contracts_on_customer_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_customers_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_customers_on_email' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_features_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_features_on_product_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_products_on_contract_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_products_on_contract_id' AND type='index'
+
+  [1m[36m (31.6ms)[0m  [1mDROP TABLE "contracts"[0m
+  [1m[35m (31.4ms)[0m  CREATE TABLE "contracts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "period" integer, "interval" integer, "fee" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "customer_id" integer) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (31.2ms)[0m  CREATE  INDEX "index_contracts_on_customer_id" ON "contracts" ("customer_id")
+  [1m[36m (16.0ms)[0m  [1mDROP TABLE "customers"[0m
+  [1m[35m (30.8ms)[0m  CREATE TABLE "customers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "address" varchar, "tax" integer) 
+  [1m[36m (31.4ms)[0m  [1mCREATE UNIQUE INDEX "index_customers_on_email" ON "customers" ("email")[0m
+  [1m[35m (31.3ms)[0m  DROP TABLE "features"
+  [1m[36m (31.0ms)[0m  [1mCREATE TABLE "features" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "fee" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "product_id" integer) [0m
+  [1m[35m (31.5ms)[0m  CREATE  INDEX "index_features_on_product_id" ON "features" ("product_id")
+  [1m[36m (30.3ms)[0m  [1mDROP TABLE "items"[0m
+  [1m[35m (24.1ms)[0m  CREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "item_name" varchar, "item_price" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (26.8ms)[0m  [1mDROP TABLE "products"[0m
+  [1m[35m (26.8ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "fee" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "contract_id" integer) 
+  [1m[36m (24.8ms)[0m  [1mCREATE  INDEX "index_products_on_contract_id" ON "products" ("contract_id")[0m
+  [1m[35m (0.0ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (31.6ms)[0m  [1mDROP TABLE "contracts"[0m
+  [1m[35m (15.6ms)[0m  CREATE TABLE "contracts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "period" integer, "interval" integer, "fee" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "customer_id" integer) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (15.6ms)[0m  CREATE  INDEX "index_contracts_on_customer_id" ON "contracts" ("customer_id")
+  [1m[36m (31.2ms)[0m  [1mDROP TABLE "customers"[0m
+  [1m[35m (30.3ms)[0m  CREATE TABLE "customers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "address" varchar, "tax" integer) 
+  [1m[36m (15.6ms)[0m  [1mCREATE UNIQUE INDEX "index_customers_on_email" ON "customers" ("email")[0m
+  [1m[35m (35.1ms)[0m  DROP TABLE "features"
+  [1m[36m (32.7ms)[0m  [1mCREATE TABLE "features" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "fee" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "product_id" integer) [0m
+  [1m[35m (14.4ms)[0m  CREATE  INDEX "index_features_on_product_id" ON "features" ("product_id")
+  [1m[36m (15.6ms)[0m  [1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "item_name" varchar, "item_price" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (15.6ms)[0m  DROP TABLE "products"
+  [1m[36m (31.3ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "fee" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "contract_id" integer) [0m
+  [1m[35m (15.6ms)[0m  CREATE  INDEX "index_products_on_contract_id" ON "products" ("contract_id")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mSQL (31.3ms)[0m  [1mDELETE FROM "customers"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "customers" ("email", "password_digest", "name", "address", "tax", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "cust1@mail.com"], ["password_digest", "$2a$10$I/GWP3auq.nX6NwJgrKFLuHGZZw1rcPU/feGlHFFzVn9OueQETR3y"], ["name", "Bee Jay"], ["address", "Been Street 30"], ["tax", 35820347], ["created_at", "2016-11-01 15:21:23.707566"], ["updated_at", "2016-11-01 15:21:23.707566"]]
+  [1m[35m (31.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "customers" ("email", "password_digest", "name", "address", "tax", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["email", "cust2@mail.com"], ["password_digest", "$2a$10$s2KgpM3B2BqrksnPxbe21Od9.05BXdeApuLgwy351o2ZAfMTm49xK"], ["name", "Cee Joy"], ["address", "Bonn Street 25"], ["tax", 49377028], ["created_at", "2016-11-01 15:21:23.801329"], ["updated_at", "2016-11-01 15:21:23.801329"]]
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "customers" ("email", "password_digest", "name", "address", "tax", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "cust3@mail.com"], ["password_digest", "$2a$10$r8MrJWYjSZo1avsDJtndJ.qQNeBuMXaliX1yLThEU5WsDqU3Z2oKa"], ["name", "Dee Jane"], ["address", "Fore Street 9"], ["tax", 17448392], ["created_at", "2016-11-01 15:21:23.879458"], ["updated_at", "2016-11-01 15:21:23.879458"]]
+  [1m[35m (43.7ms)[0m  commit transaction
+  [1m[36mSQL (24.3ms)[0m  [1mDELETE FROM "contracts"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "contracts" ("name", "period", "interval", "fee", "date", "customer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Contract 1"], ["period", 31], ["interval", 7], ["fee", 100], ["date", "2016-11-01"], ["customer_id", 1], ["created_at", "2016-11-01 15:21:23.998162"], ["updated_at", "2016-11-01 15:21:23.998162"]]
+  [1m[35m (31.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "contracts" ("name", "period", "interval", "fee", "date", "customer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Contract 2"], ["period", 365], ["interval", 7], ["fee", 105], ["date", "2016-11-01"], ["customer_id", 2], ["created_at", "2016-11-01 15:21:24.029380"], ["updated_at", "2016-11-01 15:21:24.029380"]]
+  [1m[36m (31.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "contracts" ("name", "period", "interval", "fee", "date", "customer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Contract 3"], ["period", 31], ["interval", 14], ["fee", 120], ["date", "2016-11-01"], ["customer_id", 3], ["created_at", "2016-11-01 15:21:24.060631"], ["updated_at", "2016-11-01 15:21:24.060631"]]
+  [1m[35m (31.6ms)[0m  commit transaction
+  [1m[36mSQL (30.9ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "products" ("name", "fee", "contract_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Product 1"], ["fee", 30], ["contract_id", 1], ["created_at", "2016-11-01 15:21:24.123138"], ["updated_at", "2016-11-01 15:21:24.123138"]]
+  [1m[35m (31.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "products" ("name", "fee", "contract_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Product 2"], ["fee", 10], ["contract_id", 2], ["created_at", "2016-11-01 15:21:24.154396"], ["updated_at", "2016-11-01 15:21:24.154396"]]
+  [1m[36m (31.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "products" ("name", "fee", "contract_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Product 3"], ["fee", 17], ["contract_id", 3], ["created_at", "2016-11-01 15:21:24.185649"], ["updated_at", "2016-11-01 15:21:24.185649"]]
+  [1m[35m (31.5ms)[0m  commit transaction
+  [1m[36mSQL (31.0ms)[0m  [1mDELETE FROM "features"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "features" ("name", "fee", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Feature 1"], ["fee", 5], ["product_id", 1], ["created_at", "2016-11-01 15:21:24.248151"], ["updated_at", "2016-11-01 15:21:24.248151"]]
+  [1m[35m (31.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "features" ("name", "fee", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Feature 2"], ["fee", 2], ["product_id", 2], ["created_at", "2016-11-01 15:21:24.279688"], ["updated_at", "2016-11-01 15:21:24.279688"]]
+  [1m[36m (31.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "features" ("name", "fee", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Feature 3"], ["fee", 2], ["product_id", 3], ["created_at", "2016-11-01 15:21:24.310899"], ["updated_at", "2016-11-01 15:21:24.310899"]]
+  [1m[35m (31.4ms)[0m  commit transaction
