@@ -9,7 +9,7 @@ class ListContractsTest < ActionDispatch::IntegrationTest
 
       visit customers_path
 
-      # is it the rigth customer?
+      # is it the right customer?
       assert page.has_content? customer.email
 
       find_link("button-show-1").click

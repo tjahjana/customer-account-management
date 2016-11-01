@@ -24,9 +24,10 @@
         <td><%= contract.period %></td>
         <td><%= contract.interval %></td>
         <td><%= contract.fee %></td>
-        <td><%= link_to 'Show', contract %></td>
-        <td><%= link_to 'Edit', edit_contract_path(contract) %></td>
-        <td><%= link_to 'Destroy', contract, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', contract, id: "button-show-#{contract.id}" %></td>
+        <td><%= link_to 'Edit', edit_contract_path(contract) , id: "button-edit-#{contract.id}"  %></td>
+        <td><%= link_to 'Destroy', contract, method: :delete, data: { confirm: 'Are you sure?' },
+                id: "button-destroy-#{contract.id}" %></td>
       </tr>
     <% end %>
   </tbody>
