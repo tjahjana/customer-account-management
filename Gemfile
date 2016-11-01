@@ -4,8 +4,9 @@ source 'http://rubygems.org'
 group :test do
 # see https://github.com/jnicklas/capybara#setup
   gem 'capybara'
+  gem 'launchy'
 end
-gem 'capybara'
+#gem 'capybara'
 
 # Windows hack
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
