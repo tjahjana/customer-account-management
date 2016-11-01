@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -22,9 +21,8 @@ ActiveRecord::Schema.define(version: 20161024220810) do
     t.datetime "updated_at",  null: false
     t.string   "name"
     t.integer  "customer_id"
+    t.index ["customer_id"], name: "index_contracts_on_customer_id"
   end
-
-  add_index "contracts", ["customer_id"], name: "index_contracts_on_customer_id"
 
   create_table "customers", force: :cascade do |t|
     t.string   "email"
@@ -34,9 +32,8 @@ ActiveRecord::Schema.define(version: 20161024220810) do
     t.string   "name"
     t.string   "address"
     t.integer  "tax"
+    t.index ["email"], name: "index_customers_on_email", unique: true
   end
-
-  add_index "customers", ["email"], name: "index_customers_on_email", unique: true
 
   create_table "features", force: :cascade do |t|
     t.text     "name"
@@ -44,9 +41,8 @@ ActiveRecord::Schema.define(version: 20161024220810) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "product_id"
+    t.index ["product_id"], name: "index_features_on_product_id"
   end
-
-  add_index "features", ["product_id"], name: "index_features_on_product_id"
 
   create_table "items", force: :cascade do |t|
     t.string   "item_name"
@@ -61,8 +57,7 @@ ActiveRecord::Schema.define(version: 20161024220810) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "contract_id"
+    t.index ["contract_id"], name: "index_products_on_contract_id"
   end
-
-  add_index "products", ["contract_id"], name: "index_products_on_contract_id"
 
 end
