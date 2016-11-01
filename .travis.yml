@@ -2,6 +2,6 @@ language: ruby
 env:
 	- DB=sqlite
 script:
-	- bin/rails db:migrate RAILS_ENV=test
-	- bundle install
+	- bin/rake db:migrate RAILS_ENV=test
+	- bundle install 
 	- bundle exec rake test
