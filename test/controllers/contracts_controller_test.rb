@@ -18,7 +18,7 @@ class ContractsControllerTest < ActionController::TestCase
 
   test "should create contract" do
     assert_difference('Contract.count') do
-      post :create, contract: { date: @contract.date, fee: @contract.fee, interval: @contract.interval, period: @contract.period, type: @contract.type }
+      post :create, contract: { date: @contract.date, fee: @contract.fee, interval: @contract.interval, period: @contract.period, name: @contract.name }
     end
 
     assert_redirected_to contract_path(assigns(:contract))
@@ -35,7 +35,7 @@ class ContractsControllerTest < ActionController::TestCase
   end
 
   test "should update contract" do
-    patch :update, id: @contract, contract: { date: @contract.date, fee: @contract.fee, interval: @contract.interval, period: @contract.period, type: @contract.type }
+    patch :update, id: @contract, contract: { date: @contract.date, fee: @contract.fee, interval: @contract.interval, period: @contract.period, name: @contract.name }
     assert_redirected_to contract_path(assigns(:contract))
   end
 
