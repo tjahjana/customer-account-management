@@ -1,15 +1,28 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: Service
+  id: 1
+  name: Contract 1
   date: 2016-10-24
-  period: 1
-  interval: 1
-  fee: 1
+  period: 31
+  interval: 7
+  fee: 100
+  customer_id: 1
 
 two:
-  name: SaaS
+  id: 2
+  name: Contract 2
   date: 2016-10-24
-  period: 1
-  interval: 1
-  fee: 1
+  period: 365
+  interval: 7
+  fee: 105
+  customer_id: 2
+
+three:
+  id: 3
+  name: Contract 3
+  date: 2016-10-24
+  period: 31
+  interval: 14
+  fee: 120
+  customer_id: 3

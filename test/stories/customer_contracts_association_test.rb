@@ -5,6 +5,20 @@ class ListContractsTest < ActionDispatch::IntegrationTest
 
     test "get contracts list of customer" do
       #perform test
-      assert_equal 1, 0
+      customer = customers(:one)
+
+      visit customers_path
+
+      # is it the rigth customer?
+      assert page.has_content? customer.email
+
+      find_link("button-show-1").click
+
+      # is the right contract listed?
+      assert page.has_content?  'Contract 1'
+      contract = contracts(:one)
+
+      # test association in database
+      assert_equal customer.id, contract.customer_id
   end
 end
