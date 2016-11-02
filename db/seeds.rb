@@ -7,9 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Customer.delete_all
-customer1 = Customer.create(email: "cust1@mail.com", password: "123", password_confirmation: "123", name:"Bee Jay", address:"Been Street 30", tax: "35820347")
-customer2 = Customer.create(email: "cust2@mail.com", password: "456", password_confirmation: "456", name:"Cee Joy", address:"Bonn Street 25", tax: "49377028")
-customer3 = Customer.create(email: "cust3@mail.com", password: "789", password_confirmation: "789", name:"Dee Jane", address:"Fore Street 9", tax: "17448392")
+customer1 = Customer.create(email: "cust1@mail.com", name:"Bee Jay", address:"Been Street 30", tax: "35820347")
+customer2 = Customer.create(email: "cust2@mail.com", name:"Cee Joy", address:"Bonn Street 25", tax: "49377028")
+customer3 = Customer.create(email: "cust3@mail.com", name:"Dee Jane", address:"Fore Street 9", tax: "17448392")
 
 Contract.delete_all
 contract1 = customer1.contracts.create(name: "Contract 1", period: 31, interval: 7, fee: 100, date: Date.today)

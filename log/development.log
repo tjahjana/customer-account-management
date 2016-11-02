@@ -5621,3 +5621,296 @@ Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bd
             FROM sqlite_temp_master
             WHERE name='index_products_on_contract_id' AND type='index'
 
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from require at /Users/asiel/.rbenv/versions/2.2.3/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:55)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <main> at /Users/asiel/.rbenv/versions/2.2.3/bin/rake:33)
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemovePasswordFromCustomer (20161102095301)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TEMPORARY TABLE "acustomers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "address" varchar, "tax" integer)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_customers_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_customers_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_acustomers_on_email" ON "acustomers" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "acustomers" ("id","email","password_digest","created_at","updated_at","name","address","tax")
+                     SELECT "id","email","password_digest","created_at","updated_at","name","address","tax" FROM "customers"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "customers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "customers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "address" varchar, "tax" integer)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_acustomers_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_acustomers_on_email' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_customers_on_email" ON "customers" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "customers" ("id","email","created_at","updated_at","name","address","tax")
+                     SELECT "id","email","created_at","updated_at","name","address","tax" FROM "acustomers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "acustomers"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161102095301"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-11-02 09:57:08 UTC], ["updated_at", 2016-11-02 09:57:08 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_contracts_on_customer_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_contracts_on_customer_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_customers_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_customers_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_features_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_features_on_product_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_products_on_contract_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_products_on_contract_id' AND type='index'
+[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <main> at /Users/asiel/.rbenv/versions/2.2.3/bin/rake:33)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[31mDELETE FROM "customers"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address", "tax") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "cust1@mail.com"], ["created_at", 2016-11-02 09:57:15 UTC], ["updated_at", 2016-11-02 09:57:15 UTC], ["name", "Bee Jay"], ["address", "Been Street 30"], ["tax", 35820347]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address", "tax") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "cust2@mail.com"], ["created_at", 2016-11-02 09:57:15 UTC], ["updated_at", 2016-11-02 09:57:15 UTC], ["name", "Cee Joy"], ["address", "Bonn Street 25"], ["tax", 49377028]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address", "tax") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "cust3@mail.com"], ["created_at", 2016-11-02 09:57:15 UTC], ["updated_at", 2016-11-02 09:57:15 UTC], ["name", "Dee Jane"], ["address", "Fore Street 9"], ["tax", 17448392]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[31mDELETE FROM "contracts"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "contracts" ("date", "period", "interval", "fee", "created_at", "updated_at", "name", "customer_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", Wed, 02 Nov 2016], ["period", 31], ["interval", 7], ["fee", 100], ["created_at", 2016-11-02 09:57:15 UTC], ["updated_at", 2016-11-02 09:57:15 UTC], ["name", "Contract 1"], ["customer_id", 4]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "contracts" ("date", "period", "interval", "fee", "created_at", "updated_at", "name", "customer_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", Wed, 02 Nov 2016], ["period", 365], ["interval", 7], ["fee", 105], ["created_at", 2016-11-02 09:57:15 UTC], ["updated_at", 2016-11-02 09:57:15 UTC], ["name", "Contract 2"], ["customer_id", 5]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "contracts" ("date", "period", "interval", "fee", "created_at", "updated_at", "name", "customer_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", Wed, 02 Nov 2016], ["period", 31], ["interval", 14], ["fee", 120], ["created_at", 2016-11-02 09:57:15 UTC], ["updated_at", 2016-11-02 09:57:15 UTC], ["name", "Contract 3"], ["customer_id", 6]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[31mDELETE FROM "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "fee", "created_at", "updated_at", "contract_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Product 1"], ["fee", 30], ["created_at", 2016-11-02 09:57:15 UTC], ["updated_at", 2016-11-02 09:57:15 UTC], ["contract_id", 4]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "fee", "created_at", "updated_at", "contract_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Product 2"], ["fee", 10], ["created_at", 2016-11-02 09:57:15 UTC], ["updated_at", 2016-11-02 09:57:15 UTC], ["contract_id", 5]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "fee", "created_at", "updated_at", "contract_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Product 3"], ["fee", 17], ["created_at", 2016-11-02 09:57:15 UTC], ["updated_at", 2016-11-02 09:57:15 UTC], ["contract_id", 6]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[31mDELETE FROM "features"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "features" ("name", "fee", "created_at", "updated_at", "product_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Feature 1"], ["fee", 5], ["created_at", 2016-11-02 09:57:15 UTC], ["updated_at", 2016-11-02 09:57:15 UTC], ["product_id", 4]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "features" ("name", "fee", "created_at", "updated_at", "product_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Feature 2"], ["fee", 2], ["created_at", 2016-11-02 09:57:15 UTC], ["updated_at", 2016-11-02 09:57:15 UTC], ["product_id", 5]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "features" ("name", "fee", "created_at", "updated_at", "product_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Feature 3"], ["fee", 2], ["created_at", 2016-11-02 09:57:15 UTC], ["updated_at", 2016-11-02 09:57:15 UTC], ["product_id", 6]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2016-11-02 10:58:27 +0100
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from raise_in_transactional_callbacks= at /usr/local/rvm/gems/ruby-1.9.3-p392/gems/activerecord-5.0.0/lib/active_record/transactions.rb:283)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (20.8ms)
+Completed 200 OK in 516ms (Views: 500.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-11-02 10:58:30 +0100
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (4.7ms)
+Completed 200 OK in 38ms (Views: 32.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/4" for ::1 at 2016-11-02 10:58:33 +0100
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering customers/show.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (0.2ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?[0m  [["customer_id", 4]]
+  Rendered customers/show.html.erb within layouts/application.html.erb (12.6ms)
+Completed 200 OK in 68ms (Views: 40.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/contracts/4/edit" for ::1 at 2016-11-02 10:58:36 +0100
+Processing by ContractsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mContract Load (0.3ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering contracts/edit.html.erb within layouts/application.html.erb
+  Rendered contracts/_form.html.erb (77.4ms)
+  Rendered contracts/edit.html.erb within layouts/application.html.erb (80.9ms)
+Completed 200 OK in 118ms (Views: 111.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/contracts/4" for ::1 at 2016-11-02 10:58:43 +0100
+Processing by ContractsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/YvJcT9IiaviR8vOxcmPnf+WNdImoAmygCe+0ZtTaOtgoP8Dj8XBcw07JG7A+zVR2bnhvm2poFfhc2DNbGDGOQ==", "contract"=>{"name"=>"Contract 1", "date(1i)"=>"2016", "date(2i)"=>"11", "date(3i)"=>"2", "period"=>"31", "interval"=>"7", "fee"=>"105"}, "commit"=>"Update Contract", "id"=>"4"}
+  [1m[36mContract Load (0.1ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "contracts" SET "fee" = ?, "updated_at" = ? WHERE "contracts"."id" = ?[0m  [["fee", 105], ["updated_at", 2016-11-02 09:58:43 UTC], ["id", 4]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/contracts/4
+Completed 302 Found in 10ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/contracts/4" for ::1 at 2016-11-02 10:58:43 +0100
+Processing by ContractsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mContract Load (0.2ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering contracts/show.html.erb within layouts/application.html.erb
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."contract_id" = ?[0m  [["contract_id", 4]]
+  Rendered contracts/show.html.erb within layouts/application.html.erb (10.6ms)
+Completed 200 OK in 44ms (Views: 34.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-02 10:58:45 +0100
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (5.9ms)
+Completed 200 OK in 48ms (Views: 44.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/4/edit" for ::1 at 2016-11-02 10:58:48 +0100
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering customers/edit.html.erb within layouts/application.html.erb
+  Rendered customers/_form.html.erb (11.6ms)
+  Rendered customers/edit.html.erb within layouts/application.html.erb (16.3ms)
+Completed 200 OK in 87ms (Views: 83.0ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/customers/4" for ::1 at 2016-11-02 10:58:55 +0100
+Processing by CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B5j0qVbJPK6IWKvvqVD8oaT+z2jvufV4k803GKdfPV2as8Lb5kR0dmckRE+sYkZtgtEbBKSwXJ3ymekEUGyTjw==", "customer"=>{"email"=>"cust1@mail.com", "password_confirmation"=>"[FILTERED]", "name"=>"Bee Jay", "address"=>"Been Street 32", "tax"=>"35820347"}, "commit"=>"Update Customer", "id"=>"4"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "customers" SET "address" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["address", "Been Street 32"], ["updated_at", 2016-11-02 09:58:55 UTC], ["id", 4]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/customers/4
+Completed 302 Found in 8ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/customers/4" for ::1 at 2016-11-02 10:58:55 +0100
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering customers/show.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (0.4ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?[0m  [["customer_id", 4]]
+  Rendered customers/show.html.erb within layouts/application.html.erb (3.4ms)
+Completed 200 OK in 36ms (Views: 31.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/customers/4" for ::1 at 2016-11-02 10:59:11 +0100
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering customers/show.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (0.3ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?[0m  [["customer_id", 4]]
+  Rendered customers/show.html.erb within layouts/application.html.erb (2.5ms)
+Completed 200 OK in 37ms (Views: 33.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/contracts/4/edit" for ::1 at 2016-11-02 10:59:14 +0100
+Processing by ContractsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mContract Load (0.2ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering contracts/edit.html.erb within layouts/application.html.erb
+  Rendered contracts/_form.html.erb (8.2ms)
+  Rendered contracts/edit.html.erb within layouts/application.html.erb (11.8ms)
+Completed 200 OK in 54ms (Views: 49.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-11-02 10:59:17 +0100
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (4.7ms)
+Completed 200 OK in 77ms (Views: 55.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/customers/4/edit" for ::1 at 2016-11-02 10:59:20 +0100
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering customers/edit.html.erb within layouts/application.html.erb
+  Rendered customers/_form.html.erb (3.9ms)
+  Rendered customers/edit.html.erb within layouts/application.html.erb (6.4ms)
+Completed 200 OK in 58ms (Views: 52.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/customers" for ::1 at 2016-11-02 10:59:22 +0100
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (5.4ms)
+Completed 200 OK in 52ms (Views: 49.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/4" for ::1 at 2016-11-02 10:59:24 +0100
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering customers/show.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (0.3ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?[0m  [["customer_id", 4]]
+  Rendered customers/show.html.erb within layouts/application.html.erb (5.4ms)
+Completed 200 OK in 67ms (Views: 61.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers" for ::1 at 2016-11-02 10:59:31 +0100
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (8.7ms)
+Completed 200 OK in 55ms (Views: 46.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/new" for ::1 at 2016-11-02 10:59:32 +0100
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application.html.erb
+  Rendered customers/_form.html.erb (2.8ms)
+  Rendered customers/new.html.erb within layouts/application.html.erb (5.2ms)
+Completed 200 OK in 37ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for ::1 at 2016-11-02 10:59:35 +0100
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (4.8ms)
+Completed 200 OK in 46ms (Views: 41.4ms | ActiveRecord: 0.3ms)
+
+
