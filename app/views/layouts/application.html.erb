@@ -15,8 +15,21 @@
 
 	<main>
 
+		<div id="notice">
+			<% flash.each do |name, msg| %>
+  			<% if msg.is_a?(String) %>
+    			<%= content_tag :div, msg, :class => "flash_#{name}" %>
+  			<% end %>
+			<% end %>
+		</div>
+
 		<div class="nav">
 			<ul class="nav-list">
+				<li>
+					<% if logged_in? %> You are logged in as <%= link_to current_user.username, current_user %>
+    			-- <%= link_to "Logout", logout_path, method: :delete %>
+    			<% else %> <%= link_to "Log in", login_path %><% end %>
+				</li>
 				<li>
 					<%= link_to "customer", :controller => 'customers', :action => 'index' %>
 				</li>
@@ -33,6 +46,7 @@
 					<%= link_to "user", :controller => 'users', :action => 'index' %>
 				</li>
 			</ul>
+
 			<hr>
 		</div>
 
