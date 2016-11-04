@@ -2,8 +2,8 @@
 
 one:
   username: MyString
-  password_digest: <%= BCrypt::Password.create('secret') %>
+  password_digest: <%= BCrypt::Password.create('12345') %>
 
 two:
   username: MyString
-  password_digest: <%= BCrypt::Password.create('secret') %>
+  password_digest: <%= BCrypt::Password.create('12345') %>

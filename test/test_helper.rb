@@ -24,3 +24,9 @@ class ActionDispatch::IntegrationTest
     Capybara.use_default_driver
   end
 end
+
+#Code from Barbara Kleinen media-programming-rails/poller/test/test_helper.rb
+#commit 1d1e8a634b84e4b8d1113b045f89ab50df81089a
+def is_logged_in?
+  !session[:user_id].nil?
+end

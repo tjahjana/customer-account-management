@@ -1,3 +1,6 @@
+#Code from Barbara Kleinen media-programming-rails/poller/app/helpers/sessions_helper.rb
+#Stand 4th November 2016
+
 module SessionsHelper
   def log_in(user)
     session[:user_id] = user.id
