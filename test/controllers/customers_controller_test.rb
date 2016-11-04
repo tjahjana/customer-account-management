@@ -3,6 +3,7 @@ require 'test_helper'
 class CustomersControllerTest < ActionController::TestCase
   setup do
     @customer = customers(:one)
+    login_for_capybara(users(:one))
   end
 
   test "should get index" do
