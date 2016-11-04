@@ -31,6 +31,9 @@
     			<% else %> <%= link_to "Log in", login_path %><% end %>
 				</li>
 				<li>
+					<%= link_to "about", :controller => 'about', :action => 'index' %>
+				</li>
+				<li>
 					<%= link_to "customer", :controller => 'customers', :action => 'index' %>
 				</li>
 				<li>

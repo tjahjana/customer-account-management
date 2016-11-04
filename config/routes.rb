@@ -5,19 +5,13 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   resources :users
-  root 'customers#index'
   resources :features
   resources :products
   resources :contracts
-  #get 'items/new'
-
-  #get 'items/index'
-
-  #get 'items/show'
-
-  #get 'items/edit'
-
   resources :customers
+  resources :about
+
+  root 'about#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
