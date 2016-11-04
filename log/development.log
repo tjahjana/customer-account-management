@@ -6590,3 +6590,36 @@ DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is dep
             FROM sqlite_temp_master
             WHERE name='index_products_on_contract_id' AND type='index'
 [0m
+Started GET "/" for ::1 at 2016-11-04 12:23:43 +0100
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from raise_in_transactional_callbacks= at /usr/local/rvm/gems/ruby-1.9.3-p392/gems/activerecord-5.0.0/lib/active_record/transactions.rb:283)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (15.6ms)
+Completed 200 OK in 619ms (Views: 596.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-04 12:23:44 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-04 12:23:44 +0100
+Started GET "/login" for ::1 at 2016-11-04 12:23:50 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application.html.erb
+  Rendered sessions/new.html.erb within layouts/application.html.erb (0.4ms)
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for ::1 at 2016-11-04 12:23:59 +0100
+Processing by SessionsController#destroy as HTML
+  Rendering sessions/destroy.html.erb within layouts/application.html.erb
+  Rendered sessions/destroy.html.erb within layouts/application.html.erb (0.4ms)
+Completed 200 OK in 63ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-11-04 12:24:04 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application.html.erb
+  Rendered sessions/new.html.erb within layouts/application.html.erb (1.0ms)
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.0ms)
+
+
