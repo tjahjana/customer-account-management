@@ -15,6 +15,11 @@
  */
 
 #notice {
-	color: #335AD0;
-	background-color: #B3EEEB;
+	color: #199523;
+	background-color: #BAE7BD;
+}
+
+li.login-logout {
+	color: #199523;
+	font-style: italic;
 }

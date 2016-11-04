@@ -8210,3 +8210,177 @@ Processing by CustomersController#index as HTML
 Completed 200 OK in 47ms (Views: 43.4ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for ::1 at 2016-11-04 13:43:27 +0100
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from raise_in_transactional_callbacks= at /usr/local/rvm/gems/ruby-1.9.3-p392/gems/activerecord-5.0.0/lib/active_record/transactions.rb:283)
+  [1m[36mActiveRecord::SchemaMigration Load (20.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (31.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (51.5ms)
+  [1m[36mUser Load (17.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 932ms (Views: 793.7ms | ActiveRecord: 50.6ms)
+
+
+Started GET "/assets/application.self-0148767e270c88533ec9fbc2dbcf469e69ae46d607596dc3ae76cdecb235c098.css?body=1" for ::1 at 2016-11-04 13:43:29 +0100
+Started GET "/" for ::1 at 2016-11-04 13:43:52 +0100
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (2.9ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 56.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.self-39af102e84466cfe9ab5670eae853f05c96fb3fbda3c845cf3788240ab1e11f2.css?body=1" for ::1 at 2016-11-04 13:43:52 +0100
+Started GET "/" for ::1 at 2016-11-04 13:44:56 +0100
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (3.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 51ms (Views: 48.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-adf7ddaa16d5f1fdc2d799bf81cd8a6b19343d0e5805abd64ee403863574aea5.css?body=1" for ::1 at 2016-11-04 13:44:56 +0100
+Started GET "/" for ::1 at 2016-11-04 13:45:52 +0100
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (2.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 46ms (Views: 43.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for ::1 at 2016-11-04 13:45:52 +0100
+Started DELETE "/logout" for ::1 at 2016-11-04 13:46:08 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cJ9wbt/lz0jja51QTIwWu9DgPnX1vSS74ufB9wm2Bmjgg/VJ1FO1lRWNcu6F5ECfnlYx3flgaP8x9XWO3HeU+g=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-04 13:46:08 +0100
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (3.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 39.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2016-11-04 13:46:17 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application.html.erb
+  Rendered sessions/_form.html.erb (144.7ms)
+  Rendered sessions/new.html.erb within layouts/application.html.erb (149.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 195ms (Views: 192.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for ::1 at 2016-11-04 13:46:26 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6FeP13qXTDrV+qa4yXZWXDhY/JbDsABYttxpQKzi8+h4SwrwcSE25yMcSQYAHgB4du7zPs9tTBxlzt05eSNheg==", "session"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "admin"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 111ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-11-04 13:46:26 +0100
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (3.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 50.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/contracts" for ::1 at 2016-11-04 13:46:54 +0100
+Processing by ContractsController#index as HTML
+  Rendering contracts/index.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (26.5ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendered contracts/index.html.erb within layouts/application.html.erb (46.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 118ms (Views: 68.3ms | ActiveRecord: 27.8ms)
+
+
+Started GET "/products" for ::1 at 2016-11-04 13:46:58 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application.html.erb
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application.html.erb (19.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 52.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/features" for ::1 at 2016-11-04 13:46:59 +0100
+Processing by FeaturesController#index as HTML
+  Rendering features/index.html.erb within layouts/application.html.erb
+  [1m[36mFeature Load (0.3ms)[0m  [1m[34mSELECT "features".* FROM "features"[0m
+  Rendered features/index.html.erb within layouts/application.html.erb (10.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 61.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users" for ::1 at 2016-11-04 13:46:59 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application.html.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application.html.erb (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 54ms (Views: 51.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-11-04 13:47:00 +0100
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (5.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 53.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/contracts" for ::1 at 2016-11-04 13:47:01 +0100
+Processing by ContractsController#index as HTML
+  Rendering contracts/index.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (0.3ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendered contracts/index.html.erb within layouts/application.html.erb (5.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 77ms (Views: 73.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2016-11-04 13:47:03 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application.html.erb
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application.html.erb (6.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 65.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/features" for ::1 at 2016-11-04 13:47:03 +0100
+Processing by FeaturesController#index as HTML
+  Rendering features/index.html.erb within layouts/application.html.erb
+  [1m[36mFeature Load (0.3ms)[0m  [1m[34mSELECT "features".* FROM "features"[0m
+  Rendered features/index.html.erb within layouts/application.html.erb (12.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 85ms (Views: 78.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2016-11-04 13:47:04 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application.html.erb
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application.html.erb (4.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 59.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-11-04 13:47:07 +0100
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application.html.erb (5.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 63.1ms | ActiveRecord: 0.5ms)
+
+
