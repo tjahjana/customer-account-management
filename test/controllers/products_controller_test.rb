@@ -2,8 +2,8 @@ require 'test_helper'
 
 class ProductsControllerTest < ActionController::TestCase
   setup do
+    login_as(users(:one))
     @product = products(:one)
-    login_for_capybara(users(:one))
   end
 
   test "should get index" do
