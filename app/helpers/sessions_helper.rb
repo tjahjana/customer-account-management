@@ -15,4 +15,10 @@ module SessionsHelper
   def logged_in?
     !current_user.nil?
   end
+  def require_login
+    unless current_user
+      flash[:error] = "You must be logged in."
+      redirect_to login_url
+    end
+  end
 end
