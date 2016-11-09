@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class ListContractsTest < ActionDispatch::IntegrationTest
+  def setup
+    login_for_capybara(users(:one))
+  end
+  
     include ActiveJob::TestHelper
 
     test "get contracts list of customer" do
