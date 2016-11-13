@@ -17,35 +17,17 @@
   <%= @customer.tax %>
 </p>
 
-<h2>Listing Contracts</h2>
+<h2>Adding Contracts</h2>
 
-<table>
-  <thead>
-  <tr>
-    <th>Name</th>
-    <th>Date</th>
-    <th>Period</th>
-    <th>Interval</th>
-    <th>Fee</th>
-    <th colspan="3"></th>
-  </tr>
-  </thead>
+<%= form_for(@contract, remote: true) do |f| %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+    <%= f.submit %>
+<% end %>
 
-  <tbody>
-  <% @contracts.each do |contract| %>
-      <tr>
-        <td><%= contract.name %></td>
-        <td><%= contract.date %></td>
-        <td><%= contract.period %></td>
-        <td><%= contract.interval %></td>
-        <td><%= contract.fee %></td>
-        <td><%= link_to 'Show', contract %></td>
-        <td><%= link_to 'Edit', edit_contract_path(contract) %></td>
-        <td><%= link_to 'Destroy', contract, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-  <% end %>
-  </tbody>
-</table>
+<ul id="contracts">
+  <%= render "contracts" %>
+</ul>
 
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
 <%= link_to 'Back', customers_path %>

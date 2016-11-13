@@ -11,6 +11,20 @@ class CustomersController < ApplicationController
   # GET /customers/1.json
   def show
     @contracts = @customer.contracts.all
+
+    @contract = Contract.new(params[:contract])
+    @contract.customer = @customer
+
+    respond_to do |format|
+      if @contract.save && @contract.name
+        format.html { redirect_to @contract, notice: 'Contract was successfully created.' }
+        format.js   {}
+        format.json { render json: @contract, status: :created, location: @contract }
+      else
+        format.html { render action: "show" }
+        format.json { render json: @contract.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   # GET /customers/new
