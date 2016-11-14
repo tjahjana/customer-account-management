@@ -1,0 +1,11 @@
+<tr>
+<td><%= customer.email %></td>
+<td><%= customer.name %></td>
+<td><%= customer.address %></td>
+<td><%= customer.tax %></td>
+  <td><%= link_to 'Show', customer , id: "button-show-#{customer.id}"%></td>
+  <td><%= link_to 'Edit', edit_customer_path(customer), id: "button-edit-#{customer.id}" %></td>
+  <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } ,
+                  id: "button-delete-#{customer.id}"%></td>
+</tr>
+
