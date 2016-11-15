@@ -24033,3 +24033,1609 @@ Processing by CustomersController#create as JS
 Completed 200 OK in 164ms (Views: 110.9ms | ActiveRecord: 31.9ms)
 
 
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 12:43:00 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [4 times] (1.5ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (15.0ms)
+Completed 200 OK in 111ms (Views: 88.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/10" for 127.0.0.1 at 2016-11-15 12:43:02 +0100
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "contracts" ("created_at", "updated_at", "customer_id") VALUES (?, ?, ?)[0m  [["created_at", 2016-11-15 11:43:02 UTC], ["updated_at", 2016-11-15 11:43:02 UTC], ["customer_id", 10]]
+  [1m[35m (28.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/show.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?[0m  [["customer_id", 10]]
+  Rendered customers/_contracts.html.erb (2.0ms)
+  Rendered customers/show.html.erb within layouts/application.html.erb (15.6ms)
+Completed 200 OK in 156ms (Views: 84.6ms | ActiveRecord: 30.6ms)
+
+
+Started DELETE "/contracts/369" for 127.0.0.1 at 2016-11-15 12:43:08 +0100
+Processing by ContractsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3HFpcDGAwvOOKuA9UHyi4rSfGmFwbGlH3njaMsdpEsTHaBlca9UI8LxxiltAd7ZSg3FenhTy+rxJ/MaTUDQkfA==", "id"=>"369"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mContract Load (0.0ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT ?[0m  [["id", 369], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "contracts" WHERE "contracts"."id" = ?[0m  [["id", 369]]
+  [1m[35m (22.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/contracts
+Completed 302 Found in 27ms (ActiveRecord: 23.5ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-11-15 12:43:08 +0100
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering contracts/index.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendered contracts/index.html.erb within layouts/application.html.erb (3.0ms)
+Completed 200 OK in 99ms (Views: 85.2ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/contracts/368" for 127.0.0.1 at 2016-11-15 12:43:11 +0100
+Processing by ContractsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OvdQWgopu8ZmU/ay4A0KeTgEl13AysC6HibECOQUzhEh7iB2UHxxxVQInNTwBh7JD+rToqRUU0GJotipc0n4qQ==", "id"=>"368"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT ?[0m  [["id", 368], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "contracts" WHERE "contracts"."id" = ?[0m  [["id", 368]]
+  [1m[35m (22.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/contracts
+Completed 302 Found in 31ms (ActiveRecord: 26.0ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-11-15 12:43:11 +0100
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering contracts/index.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (0.0ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendered contracts/index.html.erb within layouts/application.html.erb (2.5ms)
+Completed 200 OK in 93ms (Views: 78.9ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/contracts/367" for 127.0.0.1 at 2016-11-15 12:43:15 +0100
+Processing by ContractsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hTwTLAHNrIaBbr07G6LVAtQ9loq0HPoenDdFXW+oH3eeJWMAW5hmhbM1110LqcGy49PSddCCaeULs1n8+PUpzw==", "id"=>"367"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mContract Load (0.0ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT ?[0m  [["id", 367], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "contracts" WHERE "contracts"."id" = ?[0m  [["id", 367]]
+  [1m[35m (22.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/contracts
+Completed 302 Found in 28ms (ActiveRecord: 25.2ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-11-15 12:43:15 +0100
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering contracts/index.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendered contracts/index.html.erb within layouts/application.html.erb (2.5ms)
+Completed 200 OK in 86ms (Views: 73.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/contracts/366" for 127.0.0.1 at 2016-11-15 12:43:18 +0100
+Processing by ContractsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8ECXdBTXstFY34g+4/cBkbM00FP5+P+9LXu0FNRXIpfrWedYToJ40mqE4ljz/BUhhNqUrJ1mbEa6/6i1QwoULw==", "id"=>"366"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mContract Load (0.0ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT ?[0m  [["id", 366], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[31mDELETE FROM "contracts" WHERE "contracts"."id" = ?[0m  [["id", 366]]
+  [1m[35m (23.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/contracts
+Completed 302 Found in 28ms (ActiveRecord: 24.8ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-11-15 12:43:18 +0100
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering contracts/index.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (0.0ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendered contracts/index.html.erb within layouts/application.html.erb (3.0ms)
+Completed 200 OK in 96ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 12:43:20 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [4 times] (1.5ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (15.1ms)
+Completed 200 OK in 105ms (Views: 86.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/customers/10" for 127.0.0.1 at 2016-11-15 12:43:24 +0100
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "contracts" ("created_at", "updated_at", "customer_id") VALUES (?, ?, ?)[0m  [["created_at", 2016-11-15 11:43:24 UTC], ["updated_at", 2016-11-15 11:43:24 UTC], ["customer_id", 10]]
+  [1m[35m (23.3ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/show.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?[0m  [["customer_id", 10]]
+  Rendered customers/_contracts.html.erb (1.5ms)
+  Rendered customers/show.html.erb within layouts/application.html.erb (14.0ms)
+Completed 200 OK in 120ms (Views: 88.9ms | ActiveRecord: 26.8ms)
+
+
+Started PATCH "/contracts/370" for 127.0.0.1 at 2016-11-15 12:43:39 +0100
+Processing by ContractsController#update as JS
+  Parameters: {"utf8"=>"✓", "contract"=>{"name"=>"bö"}, "commit"=>"Update Contract", "id"=>"370"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT ?[0m  [["id", 370], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "contracts" SET "name" = ?, "updated_at" = ? WHERE "contracts"."id" = ?[0m  [["name", "bö"], ["updated_at", 2016-11-15 11:43:39 UTC], ["id", 370]]
+  [1m[35m (21.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/contracts/370
+Completed 200 OK in 27ms (ActiveRecord: 22.5ms)
+
+
+Started GET "/contracts/370" for 127.0.0.1 at 2016-11-15 12:43:39 +0100
+Processing by ContractsController#show as HTML
+  Parameters: {"id"=>"370"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT ?[0m  [["id", 370], ["LIMIT", 1]]
+  Rendering contracts/show.html.erb within layouts/application.html.erb
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."contract_id" = ?[0m  [["contract_id", 370]]
+  Rendered contracts/show.html.erb within layouts/application.html.erb (1.5ms)
+Completed 200 OK in 106ms (Views: 85.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 12:43:44 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [4 times] (1.5ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (17.0ms)
+Completed 200 OK in 112ms (Views: 93.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/10" for 127.0.0.1 at 2016-11-15 12:43:47 +0100
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "contracts" ("created_at", "updated_at", "customer_id") VALUES (?, ?, ?)[0m  [["created_at", 2016-11-15 11:43:47 UTC], ["updated_at", 2016-11-15 11:43:47 UTC], ["customer_id", 10]]
+  [1m[35m (26.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/show.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (0.0ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?[0m  [["customer_id", 10]]
+  Rendered customers/_contracts.html.erb (2.0ms)
+  Rendered customers/show.html.erb within layouts/application.html.erb (15.5ms)
+Completed 200 OK in 121ms (Views: 85.9ms | ActiveRecord: 28.5ms)
+
+
+Started DELETE "/contracts/371" for 127.0.0.1 at 2016-11-15 12:43:52 +0100
+Processing by ContractsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JUHnUanAAt58ULJ4zar9I0lk5AEE7KwWSG5iQu4nkpI+WJd985XI3U4L2B7doemTfoqg/mByP+3f6n7jeXqkKg==", "id"=>"371"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mContract Load (0.0ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT ?[0m  [["id", 371], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[31mDELETE FROM "contracts" WHERE "contracts"."id" = ?[0m  [["id", 371]]
+  [1m[35m (25.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/contracts
+Completed 302 Found in 33ms (ActiveRecord: 29.1ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-11-15 12:43:52 +0100
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering contracts/index.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (0.0ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendered contracts/index.html.erb within layouts/application.html.erb (2.5ms)
+Completed 200 OK in 111ms (Views: 96.4ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/contracts/370" for 127.0.0.1 at 2016-11-15 12:43:56 +0100
+Processing by ContractsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dwsfM71NbZXZVh8PEtjl2tQiehc6GDCDYmOlZg8jRMVsEm8f5xinlusNdWkC0/Fq48w+6F6Go3j157nHmH5yfQ==", "id"=>"370"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mContract Load (1.0ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT ?[0m  [["id", 370], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "contracts" WHERE "contracts"."id" = ?[0m  [["id", 370]]
+  [1m[35m (22.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/contracts
+Completed 302 Found in 29ms (ActiveRecord: 25.3ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-11-15 12:43:56 +0100
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering contracts/index.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (0.0ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendered contracts/index.html.erb within layouts/application.html.erb (2.5ms)
+Completed 200 OK in 83ms (Views: 70.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 12:43:59 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [4 times] (1.5ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (14.5ms)
+Completed 200 OK in 107ms (Views: 87.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 12:47:38 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"post@anjakahhhhmmer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "post@anjakahhhhmmer.de"], ["created_at", 2016-11-15 11:47:38 UTC], ["updated_at", 2016-11-15 11:47:38 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (24.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb within layouts/application.html.erb
+  Rendered customers/_customer.html.erb (0.5ms)
+  Rendered customers/create.js.erb within layouts/application.html.erb (15.5ms)
+Completed 200 OK in 141ms (Views: 89.8ms | ActiveRecord: 26.4ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 12:48:55 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [5 times] (2.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (15.5ms)
+Completed 200 OK in 119ms (Views: 91.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 12:48:55 +0100
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 12:48:55 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 12:48:55 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 12:48:55 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 12:48:56 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 12:48:56 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 12:48:56 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 12:48:56 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 12:48:56 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 12:48:56 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 12:48:56 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 12:48:56 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 12:48:56 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 12:48:56 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 12:48:56 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 12:48:56 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 12:48:56 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 12:48:56 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 12:48:56 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 12:48:56 +0100
+Started GET "/contracts" for 127.0.0.1 at 2016-11-15 12:49:03 +0100
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering contracts/index.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendered contracts/index.html.erb within layouts/application.html.erb (2.0ms)
+Completed 200 OK in 97ms (Views: 77.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 12:49:06 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [5 times] (1.5ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (16.6ms)
+Completed 200 OK in 106ms (Views: 89.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 12:49:13 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"post@anjakammjjjer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "post@anjakammjjjer.de"], ["created_at", 2016-11-15 11:49:13 UTC], ["updated_at", 2016-11-15 11:49:13 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (21.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb within layouts/application.html.erb
+  Rendered customers/_customer.html.erb (0.5ms)
+  Rendered customers/create.js.erb within layouts/application.html.erb (16.0ms)
+Completed 200 OK in 138ms (Views: 94.7ms | ActiveRecord: 22.9ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 12:53:06 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"post@anjakavvmmjjjer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.9ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "post@anjakavvmmjjjer.de"], ["created_at", 2016-11-15 11:53:06 UTC], ["updated_at", 2016-11-15 11:53:06 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (26.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb within layouts/application.html.erb
+  Rendered customers/_customer.html.erb (1.0ms)
+  Rendered customers/create.js.erb within layouts/application.html.erb (17.0ms)
+Completed 200 OK in 147ms (Views: 91.5ms | ActiveRecord: 29.8ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 12:53:43 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [7 times] (2.1ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (16.6ms)
+Completed 200 OK in 102ms (Views: 87.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 12:53:43 +0100
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 12:53:43 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 12:53:43 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 12:53:43 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 12:53:43 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 12:53:43 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 12:53:43 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 12:53:43 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 12:53:43 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 12:53:43 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 12:53:44 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 12:53:44 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 12:53:44 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 12:53:44 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 12:53:44 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 12:53:44 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 12:53:44 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 12:53:44 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 12:53:44 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 12:53:44 +0100
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 12:54:15 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"post@anjaknnammer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "post@anjaknnammer.de"], ["created_at", 2016-11-15 11:54:15 UTC], ["updated_at", 2016-11-15 11:54:15 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (22.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb within layouts/application.html.erb
+  Rendered customers/_customer.html.erb (1.0ms)
+  Rendered customers/create.js.erb within layouts/application.html.erb (16.5ms)
+Completed 200 OK in 139ms (Views: 84.0ms | ActiveRecord: 26.6ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 12:55:46 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [8 times] (2.5ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (16.5ms)
+Completed 200 OK in 120ms (Views: 102.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 12:55:46 +0100
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 12:55:46 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 12:55:46 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 12:55:47 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 12:55:47 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 12:55:47 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 12:55:47 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 12:55:47 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 12:55:47 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 12:55:47 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 12:55:47 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 12:55:47 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 12:55:47 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 12:55:47 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 12:55:47 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 12:55:47 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 12:55:47 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 12:55:47 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 12:55:47 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 12:55:47 +0100
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 12:55:56 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"post@anjakammnnner.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "post@anjakammnnner.de"], ["created_at", 2016-11-15 11:55:56 UTC], ["updated_at", 2016-11-15 11:55:56 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (33.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb within layouts/application.html.erb
+  Rendered customers/_customer.html.erb (1.0ms)
+  Rendered customers/create.js.erb within layouts/application.html.erb (18.6ms)
+Completed 200 OK in 170ms (Views: 113.2ms | ActiveRecord: 35.1ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:05:51 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [9 times] (3.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (17.7ms)
+Completed 200 OK in 124ms (Views: 104.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 13:06:02 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"post@anjabhjhkammer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "post@anjabhjhkammer.de"], ["created_at", 2016-11-15 12:06:02 UTC], ["updated_at", 2016-11-15 12:06:02 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (25.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb within layouts/application.html.erb
+  Rendered customers/_customer.html.erb (0.0ms)
+  Rendered customers/create.js.erb within layouts/application.html.erb (4.0ms)
+Completed 200 OK in 124ms (Views: 91.8ms | ActiveRecord: 26.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:10:51 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [10 times] (3.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (17.0ms)
+Completed 200 OK in 109ms (Views: 95.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 13:11:00 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"pouuust@anjakammer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "pouuust@anjakammer.de"], ["created_at", 2016-11-15 12:11:00 UTC], ["updated_at", 2016-11-15 12:11:00 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (23.3ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb within layouts/application.html.erb
+  Rendered customers/_customer.html.erb (0.0ms)
+  Rendered customers/create.js.erb within layouts/application.html.erb (24.5ms)
+Completed 200 OK in 125ms (Views: 95.0ms | ActiveRecord: 24.3ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:11:20 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [11 times] (3.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (17.0ms)
+Completed 200 OK in 105ms (Views: 91.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:11:20 +0100
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:11:20 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:11:20 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:11:20 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:11:20 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 13:11:20 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:11:20 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:11:20 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 13:11:20 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 13:11:20 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 13:11:20 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 13:11:20 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:11:20 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:11:20 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:11:20 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:11:20 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:11:20 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:11:20 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 13:11:20 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:11:20 +0100
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 13:11:37 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"pohzzst@anjakammer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "pohzzst@anjakammer.de"], ["created_at", 2016-11-15 12:11:37 UTC], ["updated_at", 2016-11-15 12:11:37 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (21.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb within layouts/application.html.erb
+  Rendered customers/_customer.html.erb (0.0ms)
+  Rendered customers/create.js.erb within layouts/application.html.erb (15.6ms)
+Completed 200 OK in 127ms (Views: 94.5ms | ActiveRecord: 23.4ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 13:12:18 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"phhohzzst@anjakammer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.6ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "phhohzzst@anjakammer.de"], ["created_at", 2016-11-15 12:12:18 UTC], ["updated_at", 2016-11-15 12:12:18 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb within layouts/application.html.erb
+  Rendered customers/_customer.html.erb (0.0ms)
+  Rendered customers/create.js.erb within layouts/application.html.erb (15.6ms)
+Completed 200 OK in 141ms (Views: 84.2ms | ActiveRecord: 31.2ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 13:12:20 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"phhohzzst@anjakammer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "phhohzzst@anjakammer.de"], ["created_at", 2016-11-15 12:12:20 UTC], ["updated_at", 2016-11-15 12:12:20 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 2.0ms)
+
+
+  
+ActiveRecord::RecordNotUnique (SQLite3::ConstraintException: UNIQUE constraint failed: customers.email: INSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)):
+  
+app/controllers/customers_controller.rb:46:in `block in create'
+app/controllers/customers_controller.rb:45:in `create'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (0.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (625.1ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 13:12:26 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"phhohzzst@anjakammer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "phhohzzst@anjakammer.de"], ["created_at", 2016-11-15 12:12:26 UTC], ["updated_at", 2016-11-15 12:12:26 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 2.0ms)
+
+
+  
+ActiveRecord::RecordNotUnique (SQLite3::ConstraintException: UNIQUE constraint failed: customers.email: INSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)):
+  
+app/controllers/customers_controller.rb:46:in `block in create'
+app/controllers/customers_controller.rb:45:in `create'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (0.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (723.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 13:12:29 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"phhohzzst@anjhhakammer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "phhohzzst@anjhhakammer.de"], ["created_at", 2016-11-15 12:12:29 UTC], ["updated_at", 2016-11-15 12:12:29 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (20.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb within layouts/application.html.erb
+  Rendered customers/_customer.html.erb (0.0ms)
+  Rendered customers/create.js.erb within layouts/application.html.erb (3.4ms)
+Completed 200 OK in 116ms (Views: 87.9ms | ActiveRecord: 23.1ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:12:30 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [14 times] (3.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (18.1ms)
+Completed 200 OK in 112ms (Views: 94.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:12:31 +0100
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:12:31 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:12:31 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:12:31 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:12:31 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 13:12:31 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:12:31 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:12:31 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 13:12:31 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 13:12:31 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 13:12:31 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 13:12:31 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:12:31 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:12:31 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:12:31 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:12:31 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:12:31 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 13:12:31 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:12:31 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:12:31 +0100
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:13:19 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [14 times] (4.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (21.1ms)
+Completed 200 OK in 121ms (Views: 104.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:13:19 +0100
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:13:19 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:13:19 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:13:19 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:13:19 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 13:13:19 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:13:19 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:13:19 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 13:13:19 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 13:13:19 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 13:13:19 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 13:13:19 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:13:19 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:13:19 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:13:19 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:13:19 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:13:19 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:13:19 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:13:19 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 13:13:19 +0100
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:13:53 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [14 times] (5.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (19.1ms)
+Completed 200 OK in 108ms (Views: 92.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:13:53 +0100
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:13:53 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:13:53 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:13:53 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:13:53 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 13:13:53 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:13:53 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:13:53 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 13:13:53 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 13:13:53 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 13:13:53 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 13:13:53 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:13:53 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:13:53 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:13:53 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:13:53 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:13:53 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:13:53 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:13:53 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 13:13:53 +0100
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:15:10 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [14 times] (4.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (18.0ms)
+Completed 200 OK in 125ms (Views: 107.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 13:15:38 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"post@anjakajjjmmer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "post@anjakajjjmmer.de"], ["created_at", 2016-11-15 12:15:38 UTC], ["updated_at", 2016-11-15 12:15:38 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (22.2ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb within layouts/application.html.erb
+  Rendered customers/_customer.html.erb (0.0ms)
+  Rendered customers/create.js.erb within layouts/application.html.erb (4.1ms)
+Completed 200 OK in 121ms (Views: 83.2ms | ActiveRecord: 23.2ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 13:15:45 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"post@anjakajjjmmer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "post@anjakajjjmmer.de"], ["created_at", 2016-11-15 12:15:45 UTC], ["updated_at", 2016-11-15 12:15:45 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 2.0ms)
+
+
+  
+ActiveRecord::RecordNotUnique (SQLite3::ConstraintException: UNIQUE constraint failed: customers.email: INSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)):
+  
+app/controllers/customers_controller.rb:46:in `block in create'
+app/controllers/customers_controller.rb:45:in `create'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (0.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (721.8ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:16:19 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [15 times] (3.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (17.0ms)
+Completed 200 OK in 110ms (Views: 87.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:19 +0100
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:19 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:19 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:19 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:19 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:19 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:19 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:19 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:19 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:19 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:19 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:19 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:19 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:19 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:19 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:19 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:19 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:20 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:20 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:20 +0100
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:16:36 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [3 times] (1.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (17.1ms)
+Completed 200 OK in 120ms (Views: 102.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:36 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:36 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:36 +0100
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:36 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:36 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:36 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:36 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:36 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 13:16:36 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:36 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:36 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:36 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:36 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:36 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:36 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:36 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:36 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:36 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:36 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 13:16:36 +0100
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:19:16 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "customers" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", 2016-11-15 12:19:16 UTC], ["updated_at", 2016-11-15 12:19:16 UTC]]
+  [1m[35m (22.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/customers/51
+Completed 302 Found in 43ms (ActiveRecord: 26.6ms)
+
+
+Started GET "/customers/51" for 127.0.0.1 at 2016-11-15 13:19:16 +0100
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "contracts" ("created_at", "updated_at", "customer_id") VALUES (?, ?, ?)[0m  [["created_at", 2016-11-15 12:19:16 UTC], ["updated_at", 2016-11-15 12:19:16 UTC], ["customer_id", 51]]
+  [1m[35m (23.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/show.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (0.0ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?[0m  [["customer_id", 51]]
+  Rendered customers/_contracts.html.erb (2.0ms)
+  Rendered customers/show.html.erb within layouts/application.html.erb (28.0ms)
+Completed 200 OK in 169ms (Views: 127.9ms | ActiveRecord: 25.6ms)
+
+
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:19:16 +0100
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:19:16 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:19:16 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:19:16 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:19:16 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 13:19:16 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:19:16 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:19:16 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 13:19:16 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 13:19:16 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 13:19:17 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 13:19:17 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:19:17 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:19:17 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:19:17 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:19:17 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:19:17 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:19:17 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:19:17 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 13:19:17 +0100
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:19:21 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "customers" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", 2016-11-15 12:19:21 UTC], ["updated_at", 2016-11-15 12:19:21 UTC]]
+  [1m[35m (23.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/customers/52
+Completed 302 Found in 30ms (ActiveRecord: 25.4ms)
+
+
+Started GET "/customers/52" for 127.0.0.1 at 2016-11-15 13:19:21 +0100
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "contracts" ("created_at", "updated_at", "customer_id") VALUES (?, ?, ?)[0m  [["created_at", 2016-11-15 12:19:21 UTC], ["updated_at", 2016-11-15 12:19:21 UTC], ["customer_id", 52]]
+  [1m[35m (31.7ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/show.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (0.0ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?[0m  [["customer_id", 52]]
+  Rendered customers/_contracts.html.erb (0.0ms)
+  Rendered customers/show.html.erb within layouts/application.html.erb (15.6ms)
+Completed 200 OK in 125ms (Views: 87.0ms | ActiveRecord: 31.7ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:19:40 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [5 times] (0.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (15.6ms)
+Completed 200 OK in 96ms (Views: 78.4ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/customers/52" for 127.0.0.1 at 2016-11-15 13:19:44 +0100
+Processing by CustomersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/eVY20y0HM4Kz1+mxtUdjk28K2NSVzO9I8soRdPq0GDm/Cj3FuHWzTiUNcDW3gk+elJvnDbJoEa0TzTkRLfm2A==", "id"=>"52"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = ?[0m  [["id", 52]]
+  [1m[35m (27.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/customers
+Completed 302 Found in 36ms (ActiveRecord: 30.5ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:19:44 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [4 times] (2.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (16.0ms)
+Completed 200 OK in 107ms (Views: 95.0ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/customers/51" for 127.0.0.1 at 2016-11-15 13:19:48 +0100
+Processing by CustomersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"W5Opdpy5nUivbKbDcFOAWGerfDJx+Bw/sgQc5z+dmdhAitlaxuxXS503zKVgWJToUEU4zRVmj8QlgABGqMCvYA==", "id"=>"51"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = ?[0m  [["id", 51]]
+  [1m[35m (20.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/customers
+Completed 302 Found in 25ms (ActiveRecord: 22.8ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:19:48 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [3 times] (1.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (15.0ms)
+Completed 200 OK in 103ms (Views: 91.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:20:56 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [3 times] (1.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (17.0ms)
+Completed 200 OK in 140ms (Views: 111.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:20:56 +0100
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:20:56 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:20:56 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:20:57 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:20:57 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 13:20:57 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:20:57 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:20:57 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 13:20:57 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 13:20:57 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 13:20:57 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 13:20:57 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:20:57 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:20:57 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:20:57 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:20:57 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:20:57 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:20:57 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:20:57 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 13:20:57 +0100
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 13:21:02 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"post@anjakammer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "post@anjakammer.de"], ["created_at", 2016-11-15 12:21:02 UTC], ["updated_at", 2016-11-15 12:21:02 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (23.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb within layouts/application.html.erb
+  Rendered customers/_customer.html.erb (1.0ms)
+  Rendered customers/create.js.erb within layouts/application.html.erb (17.0ms)
+Completed 200 OK in 127ms (Views: 91.2ms | ActiveRecord: 24.6ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:21:06 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [4 times] (2.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (16.0ms)
+Completed 200 OK in 118ms (Views: 94.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:21:06 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:21:06 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:21:06 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:21:06 +0100
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:21:06 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 13:21:06 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:21:06 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:21:06 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 13:21:06 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 13:21:06 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 13:21:06 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 13:21:06 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:21:06 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:21:06 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:21:06 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:21:06 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:21:06 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:21:06 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:21:06 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 13:21:06 +0100
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 13:21:16 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"post@anjakammehhr.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "post@anjakammehhr.de"], ["created_at", 2016-11-15 12:21:16 UTC], ["updated_at", 2016-11-15 12:21:16 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (22.3ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb within layouts/application.html.erb
+  Rendered customers/_customer.html.erb (0.0ms)
+  Rendered customers/create.js.erb within layouts/application.html.erb (15.7ms)
+Completed 200 OK in 125ms (Views: 87.0ms | ActiveRecord: 23.3ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:21:19 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [5 times] (1.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (16.0ms)
+Completed 200 OK in 136ms (Views: 104.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:21:19 +0100
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:21:19 +0100
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:21:19 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:21:19 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:21:19 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 13:21:19 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:21:19 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:21:19 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 13:21:19 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 13:21:19 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 13:21:19 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 13:21:19 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:21:19 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:21:19 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:21:19 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:21:19 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:21:19 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:21:19 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:21:19 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 13:21:19 +0100
+Started DELETE "/customers/54" for 127.0.0.1 at 2016-11-15 13:21:23 +0100
+Processing by CustomersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vYL7R9XQphgo6oYVckmVcDnUGTPkg2y0FdAlNHCbn0amm4trj4VsGxqx7HNiQoHADjpdzIAd/0+CVDmV58ap/g==", "id"=>"54"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = ?[0m  [["id", 54]]
+  [1m[35m (22.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/customers
+Completed 302 Found in 28ms (ActiveRecord: 25.4ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:21:23 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [4 times] (1.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (15.0ms)
+Completed 200 OK in 98ms (Views: 86.0ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/customers/53" for 127.0.0.1 at 2016-11-15 13:21:26 +0100
+Processing by CustomersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"h2ZcHpfojCWDR3UhkgMnD4nA4mR5UTRPLZwBGmbXDjicfywyzb1GJrEcH0eCCDO/vi6mmx3Pp7S6GB278Yo4gA==", "id"=>"53"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = ?[0m  [["id", 53]]
+  [1m[35m (26.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/customers
+Completed 302 Found in 32ms (ActiveRecord: 30.3ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:21:26 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [3 times] (1.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (17.0ms)
+Completed 200 OK in 111ms (Views: 99.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:22:30 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [3 times] (1.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (15.1ms)
+Completed 200 OK in 108ms (Views: 88.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:22:30 +0100
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:22:30 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:22:30 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:22:30 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:22:30 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 13:22:30 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:22:31 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:22:31 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 13:22:31 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 13:22:31 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 13:22:31 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 13:22:31 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:22:31 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:22:31 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:22:31 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:22:31 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:22:31 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:22:31 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:22:31 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 13:22:31 +0100
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:31:06 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [3 times] (1.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (14.1ms)
+Completed 200 OK in 107ms (Views: 88.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:31:06 +0100
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:31:06 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:31:06 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:31:06 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:31:06 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 13:31:06 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:31:06 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:31:06 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 13:31:06 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 13:31:06 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 13:31:06 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 13:31:06 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:31:06 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:31:06 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:31:07 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:31:07 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:31:07 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:31:07 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:31:07 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 13:31:07 +0100
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 13:31:21 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"post@anjakammer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "post@anjakammer.de"], ["created_at", 2016-11-15 12:31:21 UTC], ["updated_at", 2016-11-15 12:31:21 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (28.5ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb within layouts/application.html.erb
+  Rendered customers/_customer.html.erb (0.0ms)
+  Rendered customers/create.js.erb within layouts/application.html.erb (15.6ms)
+Completed 200 OK in 133ms (Views: 93.4ms | ActiveRecord: 29.5ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 13:35:19 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"post@anjakammer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "post@anjakammer.de"], ["created_at", 2016-11-15 12:35:19 UTC], ["updated_at", 2016-11-15 12:35:19 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotUnique (SQLite3::ConstraintException: UNIQUE constraint failed: customers.email: INSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)):
+  
+app/controllers/customers_controller.rb:47:in `block in create'
+app/controllers/customers_controller.rb:46:in `create'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (1.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (708.0ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 13:35:25 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"post@anjakuuammer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "post@anjakuuammer.de"], ["created_at", 2016-11-15 12:35:25 UTC], ["updated_at", 2016-11-15 12:35:25 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (23.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb within layouts/application.html.erb
+  Rendered customers/_customer.html.erb (1.0ms)
+  Rendered customers/create.js.erb within layouts/application.html.erb (16.0ms)
+Completed 200 OK in 131ms (Views: 95.6ms | ActiveRecord: 27.1ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:36:36 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [5 times] (1.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (15.0ms)
+Completed 200 OK in 109ms (Views: 88.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:36:36 +0100
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:36:36 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:36:36 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:36:36 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:36:36 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 13:36:36 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:36:36 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:36:36 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 13:36:36 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 13:36:36 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 13:36:36 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 13:36:36 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:36:36 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:36:36 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:36:36 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:36:36 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:36:36 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:36:36 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:36:37 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 13:36:37 +0100
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 13:36:52 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"post@anjakahhmmer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "post@anjakahhmmer.de"], ["created_at", 2016-11-15 12:36:52 UTC], ["updated_at", 2016-11-15 12:36:52 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (22.1ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb within layouts/application.html.erb
+  Rendered customers/_customer.html.erb (1.0ms)
+  Rendered customers/create.js.erb within layouts/application.html.erb (18.6ms)
+Completed 200 OK in 122ms (Views: 88.3ms | ActiveRecord: 23.1ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:36:56 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [6 times] (2.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (16.0ms)
+Completed 200 OK in 117ms (Views: 91.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:36:56 +0100
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:36:56 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:36:56 +0100
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:36:56 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:36:56 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 13:36:56 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:36:56 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:36:56 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 13:36:56 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 13:36:56 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 13:36:56 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 13:36:56 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:36:56 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:36:56 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:36:56 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:36:56 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:36:56 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:36:56 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:36:56 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 13:36:56 +0100
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:37:20 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [6 times] (2.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (16.1ms)
+Completed 200 OK in 101ms (Views: 88.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:37:21 +0100
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:37:21 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:37:21 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:37:21 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:37:21 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 13:37:21 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:37:21 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:37:21 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 13:37:21 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 13:37:21 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 13:37:21 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 13:37:21 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:37:21 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:37:21 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:37:21 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:37:21 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:37:21 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:37:21 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:37:21 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 13:37:21 +0100
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:38:21 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [6 times] (1.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (18.1ms)
+Completed 200 OK in 121ms (Views: 99.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:39:32 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [6 times] (2.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (16.1ms)
+Completed 200 OK in 103ms (Views: 89.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 13:39:40 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"post@anjakddddammer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "post@anjakddddammer.de"], ["created_at", 2016-11-15 12:39:40 UTC], ["updated_at", 2016-11-15 12:39:40 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (22.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb within layouts/application.html.erb
+  Rendered customers/_customer.html.erb (0.0ms)
+  Rendered customers/create.js.erb within layouts/application.html.erb (15.7ms)
+Completed 200 OK in 125ms (Views: 87.6ms | ActiveRecord: 25.8ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:39:43 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [7 times] (9.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (23.1ms)
+Completed 200 OK in 113ms (Views: 94.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:39:43 +0100
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:39:43 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:39:43 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:39:43 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:39:43 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 13:39:43 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:39:43 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:39:43 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 13:39:43 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 13:39:43 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 13:39:43 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 13:39:44 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:39:44 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:39:44 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:39:44 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:39:44 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:39:44 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:39:44 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 13:39:44 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:39:44 +0100
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:40:04 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [7 times] (2.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (18.1ms)
+Completed 200 OK in 110ms (Views: 96.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:40:04 +0100
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:40:04 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:40:04 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:40:04 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 13:40:04 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:40:04 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:40:05 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 13:40:05 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:40:05 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 13:40:05 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 13:40:05 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 13:40:05 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:40:05 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:40:05 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:40:05 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:40:05 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:40:05 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:40:05 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:40:05 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 13:40:05 +0100
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 13:40:11 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"post@anjakammggger.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "post@anjakammggger.de"], ["created_at", 2016-11-15 12:40:11 UTC], ["updated_at", 2016-11-15 12:40:11 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (21.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb within layouts/application.html.erb
+  Rendered customers/_customer.html.erb (0.0ms)
+  Rendered customers/create.js.erb within layouts/application.html.erb (15.7ms)
+Completed 200 OK in 125ms (Views: 88.6ms | ActiveRecord: 23.9ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:40:14 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [8 times] (2.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (16.0ms)
+Completed 200 OK in 115ms (Views: 94.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:40:14 +0100
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:40:14 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:40:14 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:40:14 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:40:14 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 13:40:14 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:40:14 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:40:14 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 13:40:14 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 13:40:14 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 13:40:14 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 13:40:14 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:40:14 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:40:14 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:40:14 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:40:14 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:40:14 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:40:14 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:40:15 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 13:40:15 +0100
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 13:40:35 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"post@anjakambbbbmer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "post@anjakambbbbmer.de"], ["created_at", 2016-11-15 12:40:35 UTC], ["updated_at", 2016-11-15 12:40:35 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb within layouts/application.html.erb
+  Rendered customers/_customer.html.erb (0.0ms)
+  Rendered customers/create.js.erb within layouts/application.html.erb (15.7ms)
+Completed 200 OK in 121ms (Views: 88.2ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:41:23 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [3 times] (1.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (14.0ms)
+Completed 200 OK in 109ms (Views: 89.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:41:23 +0100
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:41:23 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:41:24 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:41:24 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:41:24 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 13:41:24 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:41:24 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:41:24 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 13:41:24 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 13:41:24 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 13:41:24 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 13:41:24 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:41:24 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:41:24 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:41:24 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:41:24 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:41:24 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:41:24 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 13:41:24 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:41:24 +0100
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:47:59 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [3 times] (1.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (15.0ms)
+Completed 200 OK in 219ms (Views: 198.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:48:00 +0100
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:48:00 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:48:00 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:48:00 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:48:00 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 13:48:00 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:48:00 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:48:00 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 13:48:00 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 13:48:00 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 13:48:00 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 13:48:00 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:48:00 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:48:00 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:48:00 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:48:00 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:48:00 +0100
+Started GET "/assets/application.self-17cb7e01f113ec3245c0e98567c8d630565bc780ef438200a57d2ee9eac47d2b.js?body=1" for 127.0.0.1 at 2016-11-15 13:48:00 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:48:00 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:48:00 +0100
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 13:48:07 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"post@anjakammer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "post@anjakammer.de"], ["created_at", 2016-11-15 12:48:07 UTC], ["updated_at", 2016-11-15 12:48:07 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (23.1ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb within layouts/application.html.erb
+  Rendered customers/_customer.html.erb (0.0ms)
+  Rendered customers/create.js.erb within layouts/application.html.erb (15.7ms)
+Completed 200 OK in 114ms (Views: 86.1ms | ActiveRecord: 24.1ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:49:25 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [4 times] (1.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (17.1ms)
+Completed 200 OK in 173ms (Views: 160.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-b67783ee9e1a48d8e23e7b9bc42b8588d32a06183494f11a681b6ab811c6491a.js?body=1" for 127.0.0.1 at 2016-11-15 13:49:26 +0100
+Started DELETE "/customers/61" for 127.0.0.1 at 2016-11-15 13:49:32 +0100
+Processing by CustomersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QUwnFy8Y+XBVWrDCXey9yWdHaaC3bLQqnUPhS4Hm6FNaVVc7dU0zc2cB2qRN56l5UKktX9PyJ9EKx/3qFrve6w==", "id"=>"61"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = ?[0m  [["id", 61]]
+  [1m[35m (25.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/customers
+Completed 302 Found in 31ms (ActiveRecord: 27.5ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:49:32 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [3 times] (1.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (15.0ms)
+Completed 200 OK in 101ms (Views: 89.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 13:49:36 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"post@anjakammer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "post@anjakammer.de"], ["created_at", 2016-11-15 12:49:36 UTC], ["updated_at", 2016-11-15 12:49:36 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (22.8ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb within layouts/application.html.erb
+  Rendered customers/_customer.html.erb (0.0ms)
+  Rendered customers/create.js.erb within layouts/application.html.erb (15.7ms)
+Completed 200 OK in 123ms (Views: 92.8ms | ActiveRecord: 22.8ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:51:58 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [4 times] (1.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (15.0ms)
+Completed 200 OK in 173ms (Views: 154.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:51:58 +0100
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:51:58 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:51:58 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:51:58 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:51:58 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 13:51:59 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:51:59 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:51:59 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 13:51:59 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 13:51:59 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 13:51:59 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 13:51:59 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:51:59 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:51:59 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:51:59 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:51:59 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:51:59 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:51:59 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:51:59 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 13:51:59 +0100
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 13:54:12 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [4 times] (1.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (15.0ms)
+Completed 200 OK in 114ms (Views: 88.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:54:12 +0100
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:54:12 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:54:12 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:54:12 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:54:12 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 13:54:12 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:54:12 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 13:54:12 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 13:54:12 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 13:54:12 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 13:54:12 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 13:54:12 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:54:12 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:54:12 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:54:12 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:54:12 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:54:12 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:54:12 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 13:54:12 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 13:54:12 +0100
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 13:54:20 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"post@anjakamjjjmer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "post@anjakamjjjmer.de"], ["created_at", 2016-11-15 12:54:20 UTC], ["updated_at", 2016-11-15 12:54:20 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (21.8ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb within layouts/application.html.erb
+  Rendered customers/_customer.html.erb (0.0ms)
+  Rendered customers/create.js.erb within layouts/application.html.erb (46.9ms)
+Completed 200 OK in 149ms (Views: 118.0ms | ActiveRecord: 22.8ms)
+
+
