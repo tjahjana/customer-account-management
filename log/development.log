@@ -25639,3 +25639,27 @@ Processing by CustomersController#create as JS
 Completed 200 OK in 149ms (Views: 118.0ms | ActiveRecord: 22.8ms)
 
 
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 14:02:22 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [5 times] (2.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (16.0ms)
+Completed 200 OK in 116ms (Views: 88.6ms | ActiveRecord: 4.0ms)
+
+
+Started DELETE "/customers/63" for 127.0.0.1 at 2016-11-15 14:02:26 +0100
+Processing by CustomersController#destroy as JS
+  Parameters: {"id"=>"63"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = ?[0m  [["id", 63]]
+  [1m[35m (29.7ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/destroy.js.erb
+  Rendered customers/destroy.js.erb (0.0ms)
+Completed 200 OK in 59ms (Views: 23.7ms | ActiveRecord: 32.8ms)
+
+
