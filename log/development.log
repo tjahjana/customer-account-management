@@ -25663,3 +25663,315 @@ Processing by CustomersController#destroy as JS
 Completed 200 OK in 59ms (Views: 23.7ms | ActiveRecord: 32.8ms)
 
 
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 14:09:51 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [4 times] (1.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (15.1ms)
+Completed 200 OK in 122ms (Views: 87.4ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 14:09:57 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"post@anjakjjjammer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "post@anjakjjjammer.de"], ["created_at", 2016-11-15 13:09:57 UTC], ["updated_at", 2016-11-15 13:09:57 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (23.1ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb
+  Rendered customers/_customer.html.erb (1.0ms)
+  Rendered customers/create.js.erb (17.1ms)
+Completed 200 OK in 61ms (Views: 33.7ms | ActiveRecord: 24.1ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 14:14:51 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [5 times] (2.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (17.1ms)
+Completed 200 OK in 120ms (Views: 93.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 14:14:51 +0100
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 14:14:51 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 14:14:51 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 14:14:51 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 14:14:51 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 14:14:51 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 14:14:51 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 14:14:51 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 14:14:51 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 14:14:51 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 14:14:51 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 14:14:51 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 14:14:51 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 14:14:51 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 14:14:51 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 14:14:51 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 14:14:51 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 14:14:51 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 14:14:51 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 14:14:51 +0100
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 14:14:58 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"post@anjakmmmmmmammer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "post@anjakmmmmmmammer.de"], ["created_at", 2016-11-15 13:14:58 UTC], ["updated_at", 2016-11-15 13:14:58 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (23.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb
+  Rendered customers/_customer.html.erb (1.0ms)
+  Rendered customers/create.js.erb (17.9ms)
+Completed 200 OK in 62ms (Views: 34.3ms | ActiveRecord: 24.1ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 14:15:38 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [6 times] (2.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (15.1ms)
+Completed 200 OK in 91ms (Views: 77.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 14:15:39 +0100
+Started GET "/assets/contracts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 14:15:39 +0100
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 14:15:39 +0100
+Started GET "/assets/features.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 14:15:39 +0100
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 14:15:39 +0100
+Started GET "/assets/scaffolds.self-ce25f3644f960906a863651f7eaf7910144396f369b3786234e5ae33e43e2a78.css?body=1" for 127.0.0.1 at 2016-11-15 14:15:39 +0100
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 14:15:39 +0100
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-15 14:15:39 +0100
+Started GET "/assets/application.self-47e36b5338f4bdc3027817a140d096b03075162df18fe96f4a363b9103cbfaa2.css?body=1" for 127.0.0.1 at 2016-11-15 14:15:39 +0100
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-15 14:15:39 +0100
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-15 14:15:39 +0100
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-15 14:15:39 +0100
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 14:15:39 +0100
+Started GET "/assets/contracts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 14:15:39 +0100
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 14:15:39 +0100
+Started GET "/assets/features.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 14:15:39 +0100
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 14:15:39 +0100
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 14:15:39 +0100
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-15 14:15:39 +0100
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-11-15 14:15:39 +0100
+Started POST "/customers" for 127.0.0.1 at 2016-11-15 14:15:45 +0100
+Processing by CustomersController#create as JS
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"post@anjakam...mer.de", "name"=>"Anja Kammer", "address"=>"Hoffmannstr., 9", "tax"=>""}, "commit"=>"Create Customer"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "customers" ("email", "created_at", "updated_at", "name", "address") VALUES (?, ?, ?, ?, ?)[0m  [["email", "post@anjakam...mer.de"], ["created_at", 2016-11-15 13:15:45 UTC], ["updated_at", 2016-11-15 13:15:45 UTC], ["name", "Anja Kammer"], ["address", "Hoffmannstr., 9"]]
+  [1m[35m (22.1ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/create.js.erb
+  Rendered customers/_customer.html.erb (1.0ms)
+  Rendered customers/create.js.erb (17.0ms)
+Completed 200 OK in 62ms (Views: 34.5ms | ActiveRecord: 23.1ms)
+
+
+Started DELETE "/customers/66" for 127.0.0.1 at 2016-11-15 14:15:55 +0100
+Processing by CustomersController#destroy as JS
+  Parameters: {"id"=>"66"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = ?[0m  [["id", 66]]
+  [1m[35m (32.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/destroy.js.erb
+  Rendered customers/destroy.js.erb (0.0ms)
+Completed 200 OK in 55ms (Views: 18.0ms | ActiveRecord: 36.4ms)
+
+
+Started DELETE "/customers/65" for 127.0.0.1 at 2016-11-15 14:15:58 +0100
+Processing by CustomersController#destroy as JS
+  Parameters: {"id"=>"65"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 65], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 65], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = ?[0m  [["id", 65]]
+  [1m[35m (24.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/destroy.js.erb
+  Rendered customers/destroy.js.erb (0.0ms)
+Completed 200 OK in 49ms (Views: 17.0ms | ActiveRecord: 28.6ms)
+
+
+Started DELETE "/customers/64" for 127.0.0.1 at 2016-11-15 14:16:00 +0100
+Processing by CustomersController#destroy as JS
+  Parameters: {"id"=>"64"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 64], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 64], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = ?[0m  [["id", 64]]
+  [1m[35m (22.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/destroy.js.erb
+  Rendered customers/destroy.js.erb (0.0ms)
+Completed 200 OK in 41ms (Views: 17.3ms | ActiveRecord: 25.6ms)
+
+
+Started DELETE "/customers/62" for 127.0.0.1 at 2016-11-15 14:16:01 +0100
+Processing by CustomersController#destroy as JS
+  Parameters: {"id"=>"62"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = ?[0m  [["id", 62]]
+  [1m[35m (26.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/destroy.js.erb
+  Rendered customers/destroy.js.erb (1.0ms)
+Completed 200 OK in 50ms (Views: 16.7ms | ActiveRecord: 29.9ms)
+
+
+Started GET "/customers/10" for 127.0.0.1 at 2016-11-15 14:16:04 +0100
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "contracts" ("created_at", "updated_at", "customer_id") VALUES (?, ?, ?)[0m  [["created_at", 2016-11-15 13:16:04 UTC], ["updated_at", 2016-11-15 13:16:04 UTC], ["customer_id", 10]]
+  [1m[35m (25.7ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/show.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (0.0ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?[0m  [["customer_id", 10]]
+  Rendered customers/_contracts.html.erb (0.0ms)
+  Rendered customers/show.html.erb within layouts/application.html.erb (15.6ms)
+Completed 200 OK in 123ms (Views: 81.2ms | ActiveRecord: 28.7ms)
+
+
+Started PATCH "/contracts/374" for 127.0.0.1 at 2016-11-15 14:16:11 +0100
+Processing by ContractsController#update as JS
+  Parameters: {"utf8"=>"✓", "contract"=>{"name"=>"new one"}, "commit"=>"Update Contract", "id"=>"374"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mContract Load (0.0ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT ?[0m  [["id", 374], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "contracts" SET "name" = ?, "updated_at" = ? WHERE "contracts"."id" = ?[0m  [["name", "new one"], ["updated_at", 2016-11-15 13:16:11 UTC], ["id", 374]]
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/contracts/374
+Completed 200 OK in 16ms (ActiveRecord: 13.2ms)
+
+
+Started GET "/contracts/374" for 127.0.0.1 at 2016-11-15 14:16:11 +0100
+Processing by ContractsController#show as HTML
+  Parameters: {"id"=>"374"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mContract Load (0.0ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT ?[0m  [["id", 374], ["LIMIT", 1]]
+  Rendering contracts/show.html.erb within layouts/application.html.erb
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."contract_id" = ?[0m  [["contract_id", 374]]
+  Rendered contracts/show.html.erb within layouts/application.html.erb (2.0ms)
+Completed 200 OK in 75ms (Views: 68.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-11-15 14:16:15 +0100
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application.html.erb
+  [1m[36mCustomer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered collection of customers/_customer.html.erb [3 times] (2.0ms)
+  Rendered customers/index.html.erb within layouts/application.html.erb (15.0ms)
+Completed 200 OK in 105ms (Views: 86.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/10" for 127.0.0.1 at 2016-11-15 14:16:17 +0100
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.3ms)[0m  [1m[32mINSERT INTO "contracts" ("created_at", "updated_at", "customer_id") VALUES (?, ?, ?)[0m  [["created_at", 2016-11-15 13:16:17 UTC], ["updated_at", 2016-11-15 13:16:17 UTC], ["customer_id", 10]]
+  [1m[35m (23.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering customers/show.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (1.0ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts" WHERE "contracts"."customer_id" = ?[0m  [["customer_id", 10]]
+  Rendered customers/_contracts.html.erb (3.1ms)
+  Rendered customers/show.html.erb within layouts/application.html.erb (15.1ms)
+Completed 200 OK in 135ms (Views: 101.5ms | ActiveRecord: 28.7ms)
+
+
+Started DELETE "/contracts/375" for 127.0.0.1 at 2016-11-15 14:16:21 +0100
+Processing by ContractsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OPZiZj5UrmFULuaLc7M0bahRL2+7Nt+wiDlVN9TYH7Ej7xJKZAFkYmZ1jO1juCDdn79rkN+oTEsfvUmWQ4UpCQ==", "id"=>"375"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mContract Load (0.0ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT ?[0m  [["id", 375], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "contracts" WHERE "contracts"."id" = ?[0m  [["id", 375]]
+  [1m[35m (24.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/contracts
+Completed 302 Found in 30ms (ActiveRecord: 26.3ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-11-15 14:16:22 +0100
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering contracts/index.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (0.0ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendered contracts/index.html.erb within layouts/application.html.erb (2.0ms)
+Completed 200 OK in 94ms (Views: 74.3ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/contracts/373" for 127.0.0.1 at 2016-11-15 14:16:27 +0100
+Processing by ContractsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rr3G113aKOljN7pjwwcf2HzfXj7RBwXZvYvPInw7cRK1pLb7B4/i6lFs0AXTDAtoSzEawbWZliIqD9OD62ZHqg==", "id"=>"373"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mContract Load (0.0ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT ?[0m  [["id", 373], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[31mDELETE FROM "contracts" WHERE "contracts"."id" = ?[0m  [["id", 373]]
+  [1m[35m (25.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/contracts
+Completed 302 Found in 30ms (ActiveRecord: 28.3ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-11-15 14:16:27 +0100
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering contracts/index.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (0.0ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendered contracts/index.html.erb within layouts/application.html.erb (2.0ms)
+Completed 200 OK in 83ms (Views: 71.7ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/contracts/372" for 127.0.0.1 at 2016-11-15 14:16:30 +0100
+Processing by ContractsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/k+bevDlE/sdnkBNMj8ayQ/vaPQaXWY7zsrgpp/PthvlVutWqrDZ+C/FKisiNA55OAEsC37D9cBZTvwHCJKAow==", "id"=>"372"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mContract Load (0.0ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT ?[0m  [["id", 372], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[31mDELETE FROM "contracts" WHERE "contracts"."id" = ?[0m  [["id", 372]]
+  [1m[35m (24.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/contracts
+Completed 302 Found in 30ms (ActiveRecord: 28.2ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-11-15 14:16:30 +0100
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering contracts/index.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (0.0ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendered contracts/index.html.erb within layouts/application.html.erb (2.0ms)
+Completed 200 OK in 99ms (Views: 84.0ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/contracts/374" for 127.0.0.1 at 2016-11-15 14:16:34 +0100
+Processing by ContractsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DLbVSdGnXQYQ+ycXo0omksd6OaGAAha6rIzUngtHGn4Xr6Vli/KXBSKgTXGzQTIi8JR9XuSchUE7CMg/nBosxg==", "id"=>"374"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mContract Load (0.0ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = ? LIMIT ?[0m  [["id", 374], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "contracts" WHERE "contracts"."id" = ?[0m  [["id", 374]]
+  [1m[35m (27.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/contracts
+Completed 302 Found in 32ms (ActiveRecord: 29.4ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2016-11-15 14:16:34 +0100
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering contracts/index.html.erb within layouts/application.html.erb
+  [1m[36mContract Load (0.0ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendered contracts/index.html.erb within layouts/application.html.erb (2.0ms)
+Completed 200 OK in 88ms (Views: 77.1ms | ActiveRecord: 0.0ms)
+
+
